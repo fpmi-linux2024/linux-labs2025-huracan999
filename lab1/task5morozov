@@ -1,0 +1,239 @@
+Script started on 2025-02-15 19:47:23+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ help
+[?2004lGNU bash, версия 5.2.21(1)-release (x86_64-pc-linux-gnu)
+Показанные ниже команды определены внутри командного процессора.  Чтобы вывести полный список, введите «help».
+Чтобы вывести справку по функции «name», введите «help name».
+Чтобы вывести справку по командному процессору, введите «info bash».
+Чтобы вывести справку по командам, которые отсутствуют в этом списке, введите «man -k» или «info».
+
+Звёздочка (*) рядом с названием команды означает, что эта команда отключена.
+
+ задание [&]                             history [-c] [-d смещение] [n] или h>
+ (( выражение ))                         if КОМАНДЫ; then КОМАНДЫ; [ elif КОМ>
+ . файл [аргументы]                      jobs [-lnprs] [задание ...] или jobs>
+ :                                       kill [-s назв_сигнала | -n номер_сиг>
+ [ аргумент... ]                         let аргумент [аргумент ...]
+ [[ выражение ]]                         local [параметр] имя[=значение] ...
+ alias [-p] [имя[=значение] ... ]        logout [n]
+ bg [задание ...]                        mapfile [-d разделитель] [-n число] >
+ bind [-lpvsPSVX] [-m раскладка] [-f ф>  popd [-n] [+N | -N]
+ break [n]                               printf [-v переменная] формат [аргум>
+ builtin [встр_команда [аргумент ...]>   pushd [-n] [+N | -N | каталог]
+ caller [выражение]                      pwd [-LP]
+ case СЛОВО in [ШАБЛОН [| ШАБЛОН]...) >  read [-ers] [-a массив] [-d разделит>
+ cd [-L|[-P [-e]] [-@]] [каталог]        readarray [-d разделитель] [-n число>
+ command [-pVv] команда [аргумент ...>   readonly [-aAf] [имя[=значение] ...]>
+ compgen [-abcdefgjksuv] [-o параметр]>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DEI]>  select ИМЯ [in СЛОВА ... ;] do КОМАН>
+ compopt [-o|+o параметр] [-DEI] [имя >  set [-abefhkmnptuvxBCEHPT] [-o optio>
+ continue [n]                            shift [n]
+ coproc [ИМЯ] команда [перенаправления>  shopt [-pqsu] [-o] [параметр ...]
+ declare [-aAfFgiIlnrtux] [name[=value>  source файл [аргументы]
+ dirs [-clpv] [+N] [-N]                  suspend [-f]
+ disown [-h] [-ar] [задание ... | pid >  test [выражение]
+ echo [-neE] [аргумент ...]              time [-p] конвейер
+ enable [-a] [-dnps] [-f файл] [имя ..>  times
+ eval [аргумент ...]                     trap [-lp] [[аргумент] сигнал ...]
+ exec [-cl] [-a имя] [команда [аргумен>  true
+ exit [n]                                type [-afptP] имя [имя ...]
+ export [-fn] [имя[=значение ...] или >  typeset [-aAfFgiIlnrtux] name[=value>
+ false                                   ulimit [-SHabcdefiklmnpqrstuvxPRT] [>
+ fc [-e редактор] [-lnr] [первая] [пос>  umask [-p] [-S] [режим]
+ fg [задание]                            unalias [-a] имя [имя ...]
+ for ИМЯ [in СЛОВА... ;] do КОМАНДЫ; d>  unset [-f] [-v] [-n] [имя ...]
+ for (( выраж1; выраж2; выраж3 )); do >  until COMMANDS; do COMMANDS-2; done
+ function ИМЯ { КОМАНДЫ ; } или ИМЯ ()>  переменные — имена и значения некото>
+ getopts строка_параметров имя [аргуме>  wait [-fn] [-p переменная] [идентифи>
+ hash [-lr] [-p путь] [-dt] [имя ...]    while COMMANDS; do COMMANDS-2; done
+ help [-dms] [шаблон ...]                { КОМАНДЫ ; }
+[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ ls
+[?2004l [0m[01;34msnap[0m           timelog5morozov   [01;34mДокументы[0m     [01;34mМузыка[0m          [01;34mШаблоны[0m
+ task5morozov  [01;34m'VirtualBox VMs'[0m   [01;34mЗагрузки[0m      [01;34mОбщедоступные[0m
+ temp.txt       [01;34mВидео[0m             [01;34mИзображения[0m  [01;34m'Рабочий стол'[0m
+[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ cd ~/Документы
+[?2004l[?2004h]0;huracan@huracan-acer: ~/Документы[01;32mhuracan@huracan-acer[00m:[01;34m~/Документы[00m$ зц[K[Kpwd
+[?2004l/home/huracan/Документы
+[?2004h]0;huracan@huracan-acer: ~/Документы[01;32mhuracan@huracan-acer[00m:[01;34m~/Документы[00m$ mkdir[K[K[K[K[Kcd ..
+[?2004l[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ mkir[K[K[Kkdir test
+[?2004l[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ rmdir test
+[?2004l[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ cp temp.txt kar.txt
+[?2004l[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ mv cp[K[K[K temp.txt `[K~/Документы
+[?2004l[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ кб[K[Krm kar.txt
+[?2004l[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ history
+[?2004l    1  root
+    2  cat /atc/lsb-realese
+    3  cat /etc/lsb-realese
+    4  cat /etc/lsb-release
+    5  lscpu
+    6  free -m
+    7  kvm-ok
+    8  sudo apt install cpu-checker
+    9  kvm-ok
+   10  egrep -c '(vmx|svm)' /proc/cpuinfo~
+   11  sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager
+   12  sudo apt update && sudo apt full-upgrade -y
+   13  ~vim start-windows-2k22.sh~
+   14  vim start-windows-2k22.sh
+   15  sudo apt install ssh
+   16  gsettings set org.gnome.shell.extensions.dash‑to‑dock click‑action 'minimize'
+   17  sudo apt install synaptic
+   18  sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+   19  sudo apt-get update 
+   20  sudo apt-get install grub-customizer
+   21  grub-customaizer
+   22  sudo /etc/default/grub
+   23  sudo nano /etc/default/grub
+   24  gsettings set org.gnome.shell.extensions.dash‑to‑dock click‑action 'minimize'
+   25  gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+   26  sudo apt update && sudo apt upgrade
+   27  apt search virtual
+   28  apt search virtualbox
+   29  sudo apt install virtualbox 
+   30  sudo apt remove virtualbox
+   31  sodu dpkg --configure -a
+   32  sudo dpkg --configure -a
+   33  sudo apt install virtualbox-dkms
+   34  sudo apt install gnome-shell-extensions
+   35  sudo ./ubuntu-gdm-set-background –image /usr/share/backgrounds/warty-final-ubuntu.png 
+   36  sudo /ubuntu-gdm-set-background –image /usr/share/backgrounds/warty-final-ubuntu.png 
+   37  sudo apt remove microsoft-edge-stable
+   38  sudo apt-get install gconf-editor
+   39  virtualbox
+   40  sudo apt-get install wine
+   41  wget http://app.prntscr.com/build/setup-lightshot.exe
+   42  wine ./setup-lightshot.exe
+   43  echo Hello World
+   44  ls
+   45  echo $XDG_SESSION_TYPE
+   46  x11
+   47  echo $XDG_SESSION_TYPE
+   48  sudo apt-get install -y gnome-tweaks
+   49  gnome-tweaks
+   50  sudo nano /etc/modprobe.d/alsa-base.conf
+   51  alsamixer
+   52  sudo apt pavucontrol
+   53  sudo apt install pavucontrol
+   54  sudo apt remove pavucontrol
+   55  sudo gedit /etc/modprobe.d/alsa-base.conf
+   56  sudo nano /etc/modprobe.d/alsa-base.conf
+   57  sudo gedit /etc/modprobe.d/alsa-base.conf
+   58  sudo edit /etc/modprobe.d/alsa-base.conf
+   59  sudo nano /etc/modprobe.d/alsa-base.conf
+   60  ls
+   61  clear
+   62  cd
+   63  cd Download
+   64  cd Downloads
+   65  .
+   66  .cd
+   67  cd home/huracan
+   68  cd home
+   69  cd huracan
+   70  clear
+   71  echo "Hello World"
+   72  ls -l
+   73  clear
+   74  ls -l
+   75  cd /Documents
+   76  cd ~/Documents
+   77  cd ~/Документы
+   78  clear
+   79  cd ..
+   80  clear
+   81  cd ~/Документы
+   82  cd ..
+   83  clear
+   84  ls 
+   85  ls -l
+   86  cd ~/Документы
+   87  clear
+   88  mkdir temp.txt
+   89  сдуфк
+   90  clear
+   91  nano temp.txt
+   92  vi temp.txt
+   93  cd ~/Документы
+   94  vim temp.txt
+   95  clear
+   96  vi temp.txt
+   97  cd ~/Документы
+   98  vi temp.txt
+   99  nano temp.txt
+  100  clear
+  101  more temp.txt
+  102  less temp.txt
+  103  help
+  104  ls
+  105  cd
+  106  pwd
+  107  cd ~/Документы
+  108  mkdir temp
+  109  rmdir temp
+  110  mkdir temp
+  111  exit
+  112  ess temp.txt
+  113  clear
+  114  mkdir tempwork
+  115  cat temp.txt
+  116  cp tempwork nowork
+  117  clear
+  118  cp temp.txt text.txt
+  119  mv
+  120  clear
+  121  mv temp.txt ~/Документы
+  122  rv
+  123  rm
+  124  clear
+  125  cp test.txt temp.txt
+  126  cp test.txt temp.txaat
+  127  clear
+  128  cp text.txt temp.txt
+  129  clear
+  130  rm text.txt
+  131  find -name "temp.txt"
+  132  history
+  133  clear
+  134  sudo nano temp.txt
+  135  clear
+  136  sudo apt install mc
+  137  sudo apt remove mc
+  138  clear
+  139  scripts -ttimelog5morozov task5morozov
+  140  clear
+  141  script -ttimelog5morozov task5morozov
+  142  sudo nano tesk5morozov
+  143  sudo nano task5morozov
+  144  help
+  145  ls
+  146  cd ~/Документы
+  147  pwd
+  148  mkdir lin
+  149  cp lin
+  150  exit
+  151  script -ttimelog5morozov task5morozov
+  152  help
+  153  ls
+  154  cd ~/Документы
+  155  pwd
+  156  mkdir mor
+  157  cp mor mortemp
+  158  help
+  159  ls
+  160  cd ~/Документы
+  161  pwd
+  162  exit
+  163  help
+  164  ls
+  165  cd ~/Документы
+  166  pwd
+  167  cd ..
+  168  mkdir test
+  169  rmdir test
+  170  cp temp.txt kar.txt
+  171  mv temp.txt ~/Документы
+  172  rm kar.txt
+  173  history
+[?2004h]0;huracan@huracan-acer: ~[01;32mhuracan@huracan-acer[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2025-02-15 19:50:56+03:00 [COMMAND_EXIT_CODE="0"]
