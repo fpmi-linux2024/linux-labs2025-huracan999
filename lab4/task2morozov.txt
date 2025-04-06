@@ -1,0 +1,31 @@
+Script started on 2025-04-06 18:06:31+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="89" LINES="24"]
+Hello, user!
+[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ [K]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ mkdir workir[K[Kdir
+[?2004l[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ ls -lt
+[?2004lитого 8
+drwxrwxr-x 2 user user 4096 апр  6 18:07 [0m[01;34mworkdir[0m
+-rw-rw-r-- 1 user user    0 апр  6 18:06 task2morozov.txt
+-rw-rw-r-- 1 user user    0 апр  6 18:06 timelog2morozov
+-rw-rw-r-- 1 user user  147 апр  6 17:50 request.txt
+[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ ls -ltr
+[?2004lитого 8
+-rw-rw-r-- 1 user user  147 апр  6 17:50 request.txt
+-rw-rw-r-- 1 user user    0 апр  6 18:06 timelog2morozov
+-rw-rw-r-- 1 user user    0 апр  6 18:06 task2morozov.txt
+drwxrwxr-x 2 user user 4096 апр  6 18:07 [0m[01;34mworkdir[0m
+[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ ls -a
+[?2004l[0m[01;34m.[0m  [01;34m..[0m  request.txt  task2morozov.txt  timelog2morozov  [01;34mworkdir[0m
+[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ ls -i
+[?2004l540630 request.txt  540469 task2morozov.txt  540907 timelog2morozov  540471 [0m[01;34mworkdir[0m
+[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ ls -all
+[?2004lитого 16
+drwxrwxr-x  3 user user 4096 апр  6 18:07 [0m[01;34m.[0m
+drwxr-x--- 19 user user 4096 апр  6 17:50 [01;34m..[0m
+-rw-rw-r--  1 user user  147 апр  6 17:50 request.txt
+-rw-rw-r--  1 user user    0 апр  6 18:06 task2morozov.txt
+-rw-rw-r--  1 user user    0 апр  6 18:06 timelog2morozov
+drwxrwxr-x  2 user user 4096 апр  6 18:07 [01;34mworkdir[0m
+[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ exit
+[?2004lexit
+
+Script done on 2025-04-06 18:10:39+03:00 [COMMAND_EXIT_CODE="0"]

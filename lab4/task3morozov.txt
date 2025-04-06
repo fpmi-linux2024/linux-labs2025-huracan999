@@ -1,0 +1,17 @@
+Script started on 2025-04-06 18:10:46+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="107" LINES="19"]
+Hello, user!
+[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ cp request.txt workdir/
+[?2004l[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ cp request.txt workdir/.request
+[?2004l[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ ,v[K[Kmv request.txt request.bak
+[?2004l[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ mv request.bak workdir/
+[?2004l[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ ls -ali workdir/
+[?2004lитого 20
+540471 drwxrwxr-x 2 user user 4096 апр  6 18:12 [0m[01;34m.[0m
+540626 drwxrwxr-x 3 user user 4096 апр  6 18:12 [01;34m..[0m
+540912 -rw-rw-r-- 1 user user  147 апр  6 18:11 .request
+540630 -rw-rw-r-- 1 user user  147 апр  6 17:50 [00;90mrequest.bak[0m
+540483 -rw-rw-r-- 1 user user  147 апр  6 18:11 request.txt
+[?2004h]0;user@user-VirtualBox: ~/labrabota4[01;32muser@user-VirtualBox[00m:[01;34m~/labrabota4[00m$ exit
+[?2004lexit
+
+Script done on 2025-04-06 18:13:09+03:00 [COMMAND_EXIT_CODE="0"]

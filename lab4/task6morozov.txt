@@ -1,0 +1,156 @@
+Script started on 2025-04-06 19:52:47+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="128" LINES="18"]
+Hello, user!
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo su
+[?2004l[sudo] пароль для user: 
+[?2004h]0;root@user-VirtualBox: /home/userroot@user-VirtualBox:/home/user# k[Kmkdir -p /tmp/labrabota4/example-acl
+[?2004l[?2004h]0;root@user-VirtualBox: /home/userroot@user-VirtualBox:/home/user# cd /tmp/labrabota4/example-acl/
+[?2004l[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# ls -la /etc > file1.txt
+[?2004l[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m u:student:rw file1.txt
+[?2004l[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt
+[?2004l# file: file1.txt
+# owner: root
+# group: root
+user::rw-
+user:student:rw-
+group::r--
+mask::rw-
+other::r--
+
+[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# su student
+[?2004l[?2004h]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ vim file1.txt
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;18r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[18;1H"file1.txt" 245L, 21853B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1Hи[1;2Hт[1;3Hо[1;4Hг[1;5Hо[1;7H1180
+drwxr-xr-x 142 root                 root                 12288 а[2;65Hп[2;66Hр[2;67H  6 18:52 .[2;78H[K[3;1Hdrwxr-xr-x  23 root                 root                  4096 ф[3;65Hе[3;66Hв[3;67H 26 18:07 ..[3;79H[K[4;1H-rw-r--r--   1 root[17Croot[18C3444 и[4;65Hю[4;66Hл[4;69H5  2023 adduser.conf
+-rw-r--r--   1 root[17Croot[20C51 а[5;65Hп[5;66Hр[5;69H6 11:48 aliases
+drwxr-xr-x   3 root[17Croot[18C4096 а[6;65Hв[6;66Hг[6;68H27  2024 alsa
+drwxr-xr-x   2 root[17Croot[18C4096 а[7;65Hп[7;66Hр[7;69H6 17:41 alternatives
+-rw-r--r--   1 root[17Croot[19C335 а[8;65Hп[8;66Hр[8;69H8  2024 anacrontab
+-rw-r--r--   1 root[17Croot[19C433 а[9;65Hп[9;66Hр[9;69H8  2024 apg.conf
+drwxr-xr-x   5 root[17Croot[18C4096 а[10;65Hв[10;66Hг[10;68H27  2024 apm
+drwxr-xr-x   2 root[17Croot[18C4096 а[11;65Hв[11;66Hг[11;68H27  2024 apparmor
+drwxr-xr-x   9 root[17Croot[18C4096 ф[12;65Hе[12;66Hв[12;68H26 18:10 apparmor.d
+drwxr-xr-x   3 root[17Croot[18C4096 а[13;65Hв[13;66Hг[13;68H27  2024 apport
+drwxr-xr-x   9 root[17Croot[18C4096 ф[14;65Hе[14;66Hв[14;68H26 17:58 apt
+drwxr-xr-x   3 root[17Croot[18C4096 а[15;65Hв[15;66Hг[15;68H27  2024 avahi
+-rw-r--r--   1 root[17Croot[18C2319 м[16;65Hа[16;66Hр[16;68H31  2024 bash.bashrc
+-rw-r--r--   1 root[17Croot[20C45 я[17;65Hн[17;66Hв[17;68H25  2020 bash_completion[18;111H1,1[8CН[18;123Hа[18;124Hч[18;125Hа[18;126Hл[18;127Hо[1;1H[?25h[?4mP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[18;101H0[1;1H[18;102H3[1;1H[18;103H0[1;1H[18;104H/[1;1H[18;105H0[1;1H[18;106Ha[1;1H[18;107H0[1;1H[18;108Ha[1;1H[18;109H/[1;1H[18;110H2[1;1H[18;101H          [1;1H[27m[23m[29m[m[H[2J[1;1Hи[1;2Hт[1;3Hо[1;4Hг[1;5Hо[1;7H1180
+drwxr-xr-x 142 root[17Croot[17C12288 а[2;65Hп[2;66Hр[2;69H6 18:52 .
+drwxr-xr-x  23 root[17Croot[18C4096 ф[3;65Hе[3;66Hв[3;68H26 18:07 ..
+-rw-r--r--   1 root[17Croot[18C3444 и[4;65Hю[4;66Hл[4;69H5  2023 adduser.conf
+-rw-r--r--   1 root[17Croot[20C51 а[5;65Hп[5;66Hр[5;69H6 11:48 aliases
+drwxr-xr-x   3 root[17Croot[18C4096 а[6;65Hв[6;66Hг[6;68H27  2024 alsa
+drwxr-xr-x   2 root[17Croot[18C4096 а[7;65Hп[7;66Hр[7;69H6 17:41 alternatives
+-rw-r--r--   1 root[17Croot[19C335 а[8;65Hп[8;66Hр[8;69H8  2024 anacrontab
+-rw-r--r--   1 root[17Croot[19C433 а[9;65Hп[9;66Hр[9;69H8  2024 apg.conf
+drwxr-xr-x   5 root[17Croot[18C4096 а[10;65Hв[10;66Hг[10;68H27  2024 apm
+drwxr-xr-x   2 root[17Croot[18C4096 а[11;65Hв[11;66Hг[11;68H27  2024 apparmor
+drwxr-xr-x   9 root[17Croot[18C4096 ф[12;65Hе[12;66Hв[12;68H26 18:10 apparmor.d
+drwxr-xr-x   3 root[17Croot[18C4096 а[13;65Hв[13;66Hг[13;68H27  2024 apport
+drwxr-xr-x   9 root[17Croot[18C4096 ф[14;65Hе[14;66Hв[14;68H26 17:58 apt
+drwxr-xr-x   3 root[17Croot[18C4096 а[15;65Hв[15;66Hг[15;68H27  2024 avahi
+-rw-r--r--   1 root[17Croot[18C2319 м[16;65Hа[16;66Hр[16;68H31  2024 bash.bashrc
+-rw-r--r--   1 root[17Croot[20C45 я[17;65Hн[17;66Hв[17;68H25  2020 bash_completion[18;111H1,1[8CН[18;123Hа[18;124Hч[18;125Hа[18;126Hл[18;127Hо[18;1H"file1.txt" 245L, 21853B[1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101H^M[1;1H[18;101H  [2;1H[18;111H2[2;1H[?25h[?25l[18;101H~@k[2;1H[18;101H   [1;1H[18;111H1[1;1H[?25h[?25l[18;101H~@k[1;1H[18;101H   [1;1H[?25h[?25l[18;101Hi[1;1H[18;101H [1;1H[18;1H[1m-- Р[18;5HЕ[18;6HЖ[18;7HИ[18;8HМ[18;9H В[18;11HС[18;12HТ[18;13HА[18;14HВ[18;15HК[18;16HИ[18;17H --[m[18;20H[K[18;111H1,1[8CН[18;123Hа[18;124Hч[18;125Hа[18;126Hл[18;127Hо[1;1H[?25h[?25l[2;17r[2;1H[L[1;18r[1;1H[K[2;1Hи[2;2Hт[2;3Hо[2;4Hг[2;5Hо[2;7H1180[18;111H[K[18;111H2,1[8CН[18;123Hа[18;124Hч[18;125Hа[18;126Hл[18;127Hо[2;1H[?25h[?25l[18;111H1[1;1H[?25h[?25lМ[18;113H3-2[1;2H[?25h[?25lо[18;113H5-3[1;3H[?25h[?25lр[18;113H7-4[1;4H[?25h[?25lо[18;113H9-5[1;5H[?25h[?25lз[18;113H11-6[1;6H[?25h[?25lо[18;114H3-7[1;7H[?25h[?25lв[18;114H5-8[1;8H[?25h[18;1H[K[1;7H[?25l[18;101H^[[1;7H[18;101H  [1;8H[18;111H1,13-7     Н[18;123Hа[18;124Hч[18;125Hа[18;126Hл[18;127Hо[1;7H[?25h[?25l[18;101H:[1;7H[18;101H[K[18;1H:[?25hwq[?25l[?2004l[>4;m"file1.txt" 246L, 21868B з[18;27Hа[18;28Hп[18;29Hи[18;30Hс[18;31Hа[18;32Hн[18;33Hо[18;1H[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ exit[K[K[K[Ksudo su
+[?2004l[sudo] пароль для student: 
+Попробуйте ещё раз.
+[sudo] пароль для student: 
+Попробуйте ещё раз.
+[sudo] пароль для student: 
+sudo: 3 неправильные попытки ввода пароля
+[?2004h]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ s[Kexit
+[?2004lexit
+[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# ls /usr/bin > [Kfile2.txt
+[?2004l[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=-[K[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=- [K[A[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=-[K[A[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=-[K[A[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file1.txt | setfacl --set-file=- file2.txt
+[?2004l[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# cp --preserve=all file2.txt file3.txt
+[?2004l[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file2[K1.txt file2.txt file3.txt
+[?2004l# file: file1.txt
+# owner: root
+# group: root
+user::rw-
+user:student:rw-
+group::r--
+mask::rw-
+other::r--
+
+# file: file2.txt
+# owner: root
+# group: root
+user::rw-
+user:student:rw-
+group::r--
+mask::rw-
+other::r--
+
+# file: file3.txt
+# owner: root
+# group: root
+user::rw-
+user:student:rw-
+group::r--
+mask::rw-
+other::r--
+
+[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# [K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/ex ample-acl/
+[?2004lsetfacl: Опция -m: Недопустимый аргумент возле символа 4
+[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[C[C[K[A[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K[A[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K[A[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K[A[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K[A[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[K]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# setfacl -m g::visitors:rwx /tmp/labrabota4/example-acl/[1P
+[?2004l[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl /tmp/labrabota4/example-acl/
+[?2004lgetfacl: Удаление начальных '/' из абсолютных путей
+# file: tmp/labrabota4/example-acl/
+# owner: root
+# group: root
+user::rwx
+group::r-x
+group:visitors:rwx
+mask::rwx
+other::r-x
+
+[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# su student
+[?2004l[?2004h]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ newgrp visitors
+[?2004l[?2004h]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$  tou[K[K[K[Ktouch /tmp/labrabota4/letter.txt > /tmp/labrabota4/example-acl /file5.txt
+[?2004l[?2004h]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ [K]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ ls -li file5.txt
+[?2004l1493563 -rw-rw-r-- 1 student visitors 0 апр  6 20:02 file5.txt
+[?2004h]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ exit
+[?2004lexit
+[?2004h]0;student@user-VirtualBox: /tmp/labrabota4/example-acl[01;32mstudent@user-VirtualBox[00m:[01;34m/tmp/labrabota4/example-acl[00m$ exit
+[?2004lexit
+[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# getfacl file[1-5].txt
+[?2004l# file: file1.txt
+# owner: root
+# group: root
+user::rw-
+user:student:rw-
+group::r--
+mask::rw-
+other::r--
+
+# file: file2.txt
+# owner: root
+# group: root
+user::rw-
+user:student:rw-
+group::r--
+mask::rw-
+other::r--
+
+# file: file3.txt
+# owner: root
+# group: root
+user::rw-
+user:student:rw-
+group::r--
+mask::rw-
+other::r--
+
+# file: file5.txt
+# owner: student
+# group: visitors
+user::rw-
+group::rw-
+other::r--
+
+[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# rm -rf /tmp/labara[K[K[Krabota4/
+[?2004l[?2004h]0;root@user-VirtualBox: /tmp/labrabota4/example-aclroot@user-VirtualBox:/tmp/labrabota4/example-acl# exit
+[?2004lexit
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2025-04-06 20:05:40+03:00 [COMMAND_EXIT_CODE="0"]

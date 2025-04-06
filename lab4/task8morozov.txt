@@ -1,0 +1,117 @@
+Сценарий запущен на 2025-04-06 21:06:20+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="110" LINES="31"]
+[?2004h]0;administrator@astra-08041: ~[01;32madministrator@astra-08041[00m:[01;34m~[00m$ ыв[K[Ksd[K[Ksudo script -ttimelog8morozov task8morozov.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kscript -ttimelog8morozov task8morozov.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cman setcap[Kusercaps[8Pexitsu studentdo useradd student[10Pman getcapsudo useradd student[10Pman getcapsetcapusercaps[2Psetcapgetcapsetcapusercaps
+[?2004l[?1049h[22;0;0t[?1h=USERCAPS(1)                                   Утилиты PARSEC                                    USERCAPS(1)[m
+[m
+[1mНАЗВАНИЕ[0m[m
+       usercaps -- просмотр и установка привилегий пользователей.[m
+[m
+[1mКРАТКАЯ[0m [1mИНФОРМАЦИЯ[0m[m
+       usercaps  [[1m-d,[0m  [1m--delete[0m]  [[1m-z,[0m [1m--zero[0m] [[1m-f,[0m [1m--full[0m] [[1m-l,[0m [1m--linux[0m [4m<caps>[24m[1m][0m [1m[-m,[0m [1m--parsec[0m [4m<caps>[24m[1m][0m [1m[-L,[0m[m
+       [1m--Linux][0m [1m[-M,[0m [1m--PARSEC][0m [1m[-n,[0m [1m--numeric][0m [1m[-h,[0m [1m--help][0m [1m[-v,[0m [1m--version][0m [4mпользователь[24m[m
+[m
+[1mОПИСАНИЕ[0m[m
+       usercaps  -  позволяет  просматривать  и  устанавливать  привилегии  пользователей.   Использование:[m
+       usercaps   [-[l   строка   модифицирования  linux-привилегий]  [-[m  строка  модифицирования  PARSEC[m
+       привилегий][dzLMnfhv]] пользователь[m
+[m
+       Строка модифицирования привилегий состоит из слов разделенных "," или ":", каждое слово  может  быть[m
+       строкой  в  верхнем  или  нижнем  регистре или числом, перед которым стоит знак "+" или "-".  Список[m
+       возможных привилегий с сокращенными именами и числами можно увидеть  введя  для  linux-привилегий  -[m
+       `usercaps -L', для PARSEC привилегий - `usercaps -M'.  Верхний регистр для слов и знак "+" для чисел[m
+       устанавливает флаг для соответствующей привилегии, нижний регистр и знак "-" снимает его.[m
+[m
+       `usercaps <пользователь>' выводит все  привилегии  пользователя  `usercaps  -L  <пользователь>'  или[m
+       `usercaps -M' <пользователь> выводит только linux привилегии или только PARSEC привилегии.[m
+[m
+[1mПАРАМЕТРЫ[0m[m
+       [1m-d,[0m [1m--delete[0m[m
+               удалить строку пользователя из файла привилегий;[m
+[m
+       [1m-z,[0m [1m--zero[0m[m
+               сбросить все привилегии пользователя;[m
+[m
+[7m Manual page usercaps(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;administrator@astra-08041: ~[01;32madministrator@astra-08041[00m:[01;34m~[00m$ man usercapssudo script -ttimelog8morozov task8morozov.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kscript -ttimelog8morozov task8morozov.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cman setcap[Kusercaps[8Pexitsu studentdo useradd student[10Pman getcapsetcapusercaps[2Psetcap
+[?2004l[?1049h[22;0;0t[?1h=SETCAP(8)                                 System Manager's Manual                                 SETCAP(8)[m
+[m
+[1mNAME[0m[m
+       setcap - set file capabilities[m
+[m
+[1mSYNOPSIS[0m[m
+       [1msetcap[0m [-q] [-n <rootuid>] [-v] {[4mcapabilities|-|-r}[24m [4mfilename[24m [ ... [4mcapabilitiesN[24m [4mfileN[24m ][m
+[m
+[1mDESCRIPTION[0m[m
+       In  the absence of the [1m-v[0m (verify) option [1msetcap[0m sets the capabilities of each specified [4mfilename[24m to[m
+       the [4mcapabilities[24m specified.  The optional [1m-n[0m [1m<rootuid>[0m argument can be used to set the file capabil‐[m
+       ity  for  use only in a user namespace with this root user ID owner. The [1m-v[0m option is used to verify[m
+       that the specified capabilities are currently associated with the file. If -v and -n  are  supplied,[m
+       the [1m-n[0m [1m<rootuid>[0m argument is also verified.[m
+[m
+       The [4mcapabilities[24m are specified in the form described in [1mcap_from_text[0m(3).[m
+[m
+       The  special  capability  string,  [1m'-'[0m,  can be used to indicate that capabilities are read from the[m
+       standard input. In such cases, the capability set is terminated with a blank line.[m
+[m
+       The special capability string, [1m'-r'[0m, is used to remove a capability set from a file.  Note,  setting[m
+       an empty capability set is [1mnot[0m [1mthe[0m [1msame[0m as removing it. An empty set can be used to guarantee a file[m
+       is not executed with privilege in spite of the fact that  the  prevailing  ambient+inheritable  sets[m
+       would otherwise bestow capabilities on executed binaries.[m
+[m
+       The [1m-q[0m flag is used to make the program less verbose in its output.[m
+[m
+[1mEXIT[0m [1mCODE[0m[m
+       The [1msetcap[0m program will exit with a 0 exit code if successful. On failure, the exit code is 1.[m
+[m
+[7m Manual page setcap(8) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;administrator@astra-08041: ~[01;32madministrator@astra-08041[00m:[01;34m~[00m$ man setcapusercapssudo script -ttimelog8morozov task8morozov.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kscript -ttimelog8morozov task8morozov.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cman setcap[Kusercaps[8Pexitsu studentdo useradd student[10Pman getcap
+[?2004l[?1049h[22;0;0t[?1h=GETCAP(8)                                 System Manager's Manual                                 GETCAP(8)[m
+[m
+[1mNAME[0m[m
+       getcap - examine file capabilities[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mgetcap[0m [-v] [-n] [-r] [-h] [4mfilename[24m [ ... ][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mgetcap[0m displays the name and capabilities of each specified file.[m
+[m
+[1mOPTIONS[0m[m
+       [1m-h[0m  prints quick usage.[m
+[m
+       [1m-n[0m  prints any non-zero user namespace root user ID value found to be associated with a file's capa‐[m
+           bilities.[m
+[m
+       [1m-r[0m  enables recursive search.[m
+[m
+       [1m-v[0m  display all searched entries, even if the have no file-capabilities.[m
+[m
+       [4mfilename[24m[m
+           One file per line.[m
+[m
+[1mREPORTING[0m [1mBUGS[0m[m
+       Please report bugs via:[m
+[m
+       https://bugzilla.kernel.org/buglist.cgi?component=libcap&list_id=1090757[m
+[m
+[1mSEE[0m [1mALSO[0m[m
+[7m Manual page getcap(8) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t[?2004h]0;administrator@astra-08041: ~[01;32madministrator@astra-08041[00m:[01;34m~[00m$ man getcapsetcapusercapssudo script -ttimelog8morozov task8morozov.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kscript -ttimelog8morozov task8morozov.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cman setcap[Kusercaps[8Pexitsu studentdo useradd student[10Pman getcapsetcapusercaps[2Psetcapgetcapsudo useradd student[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1
+[?2004lbash: useradd: команда не найдена
+[?2004h]0;administrator@astra-08041: ~[01;32madministrator@astra-08041[00m:[01;34m~[00m$ useradd student1[1@s[C[1@u[1@d[1@o[1@ 
+[?2004l[sudo] пароль для administrator: 
+[?2004h]0;administrator@astra-08041: ~[01;32madministrator@astra-08041[00m:[01;34m~[00m$ si[Ku stuen[K[Kdent
+[?2004lПароль: 
+Password blocked
+su: Сбой при проверке подлинности
+[?2004h]0;administrator@astra-08041: ~[01;32madministrator@astra-08041[00m:[01;34m~[00m$ sudo su
+[?2004l[?2004hroot@astra-08041:/home/administrator# usercaps student
+[?2004lusercaps: привилегии не установлены для пользователя student
+[?2004hroot@astra-08041:/home/administrator# usercaps -l 1 stuent
+[?2004lusercaps: пользователь stuent не существует
+[?2004hroot@astra-08041:/home/administrator# usercaps -l 1 stuentdent
+[?2004l-------------------
+linux привилегии пользователя 'student':
+ 0  0x00000001  cap_chown
+[?2004hroot@astra-08041:/home/administrator# exit
+[?2004lexit
+[?2004h]0;administrator@astra-08041: ~[01;32madministrator@astra-08041[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Сценарий выполнен на 2025-04-06 21:10:08+03:00 [COMMAND_EXIT_CODE="0"]
