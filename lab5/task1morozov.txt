@@ -1,0 +1,113 @@
+Script started on 2025-06-02 18:02:22+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+Hello, user!
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo "This is astr[K[K[K[Kastring from echo" ? text.txt
+[?2004lThis is astring from echo ? text.txt
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat[K[K[Kecho "This is astring from echo" ? text.txt[C[1P text.txt> text.txt
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat text.txt
+[?2004lThis is astring from echo
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat file_list.txt
+[?2004lcat: file_list.txt: Нет такого файла или каталога
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ls > file_list.txt
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat file_list.txt
+[?2004lfile_list.txt
+lab4
+lab5-tasks
+labrabota4
+linux-lab
+morozov
+snap
+text.txt
+Видео
+Документы
+Загрузки
+Изображения
+Лаба2
+Морозов.Отчёт.Лаб№5.docx
+Музыка
+Общедоступные
+Рабочий стол
+Шаблоны
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ mkdir =[K-v docs > mkdir.[K_log.txt
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat mkdir_log.txt
+[?2004lmkdir: создан каталог 'docs'
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat mkdir_log.txt > mkdir.log
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat mkdir.log
+[?2004lmkdir: создан каталог 'docs'
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ who > user.[Ks.txt
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat users.txt
+[?2004luser     seat0        2025-06-02 17:54 (login screen)
+user     tty2         2025-06-02 17:54 (tty2)
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo "thegeekstuff" | tr 'hegf' 'HEGF'
+[?2004ltHEGEEkstuFF
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo "my ID is 73535" | tr -d '[K'0-0'[K[K9'
+[?2004lmy ID is 
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo "my ID is 73535" | tr -d '0-9'[1@c[C[C[C[C[C[C\'n'
+[?2004l73535
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ mkdir example9
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ touch example9/{a,b,c,d,e,f,g,h,i,j}.txt
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ls
+[?2004l [0m[01;34mdocs[0m            [01;34mlinux-lab[0m       users.txt     Морозов.Отчёт.Лаб№5.docx
+ [01;34mexample9[0m        mkdir.log       [01;34mВидео[0m         [01;34mМузыка[0m
+ file_list.txt   mkdir_log.txt   [01;34mДокументы[0m     [01;34mОбщедоступные[0m
+ [01;34mlab4[0m            [01;34mmorozov[0m         [01;34mЗагрузки[0m     [01;34m'Рабочий стол'[0m
+ [01;34mlab5-tasks[0m      [01;34msnap[0m            [01;34mИзображения[0m   [01;34mШаблоны[0m
+ [01;34mlabrabota4[0m      text.txt        [01;34mЛаба2[0m
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cp /home/user/*.txt example/[K9/
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ls example9
+[?2004la.txt  c.txt  e.txt          f.txt  h.txt  j.txt          text.txt
+b.txt  d.txt  file_list.txt  g.txt  i.txt  mkdir_log.txt  users.txt
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ls *yxt [K[K[K[Ktxt | tr 'e' 'E' > ../ls_log.txt
+[?2004lbash: ../ls_log.txt: Отказано в доступе
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cd ..ls *txt | tr 'e' 'E' > ../ls_log.txt[1@s[1@u[1@d[1@o[1@ 
+[?2004lbash: ../ls_log.txt: Отказано в доступе
+[sudo] пароль для user: 
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cd ..[K[K[K[K[Kcd examo[Kple9
+[?2004l[?2004h]0;user@user-VirtualBox: ~/example9[01;32muser@user-VirtualBox[00m:[01;34m~/example9[00m$ cd example9sudo ls *txt | tr 'e' 'E' > ../ls_log.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h]0;user@user-VirtualBox: ~/example9[01;32muser@user-VirtualBox[00m:[01;34m~/example9[00m$ cat ls_[K[K[K[K[K[K[Kcd ..
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat ls_log.txt
+[?2004la.txt
+b.txt
+c.txt
+d.txt
+E.txt
+filE_list.txt
+f.txt
+g.txt
+h.txt
+i.txt
+j.txt
+mkdir_log.txt
+tExt.txt
+usErs.txt
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ls -l | tee wordscount.txt | wc >wor[K[K[K wordscount.txt
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat wordscount.txt
+[?2004l     26     228    1564
+-x  2 user user    4096 июн  2 18:06 docs
+drwxrwxr-x  2 user user    4096 июн  2 18:09 example9
+-rw-rw-r--  1 user user     274 июн  2 18:06 file_list.txt
+drwxrwxr-x  2 user user    4096 апр  6 21:27 lab4
+drwxrwxr-x 12 user user    4096 апр  9 18:40 lab5-tasks
+drwxrwxr-x  3 user user    4096 апр  6 20:08 labrabota4
+drwxrwxr-x  8 user user    4096 июн  2 18:03 linux-lab
+-rw-rw-r--  1 user user     107 июн  2 18:10 ls_log.txt
+-rw-rw-r--  1 user user      42 июн  2 18:07 mkdir.log
+-rw-rw-r--  1 user user      42 июн  2 18:06 mkdir_log.txt
+drwxrwxr-x  2 user user    4096 апр  6 11:11 morozov
+drwx------  7 user user    4096 мар 31 18:00 snap
+-rw-rw-r--  1 user user      26 июн  2 18:04 text.txt
+-rw-rw-r--  1 user user     100 июн  2 18:07 users.txt
+-rw-rw-r--  1 user user       0 июн  2 18:11 wordscount.txt
+drwxr-xr-x  2 user user    4096 мар 31 17:02 Видео
+drwxr-xr-x  2 user user    4096 июн  2 10:33 Документы
+drwxr-xr-x  4 user user    4096 июн  2 18:00 Загрузки
+drwxr-xr-x  3 user user    4096 апр  1 18:20 Изображения
+drwxrwxr-x  2 user user    4096 мар 31 17:21 Лаба2
+-rw-rw-r--  1 user user 2945545 апр  9 18:48 Морозов.Отчёт.Лаб№5.docx
+drwxr-xr-x  2 user user    4096 мар 31 17:02 Музыка
+drwxr-xr-x  2 user user    4096 мар 31 17:02 Общедоступные
+drwxr-xr-x  2 user user    4096 мар 31 17:02 Рабочий стол
+drwxr-xr-x  2 user user    4096 мар 31 17:02 Шаблоны
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2025-06-02 18:11:53+03:00 [COMMAND_EXIT_CODE="0"]

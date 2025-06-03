@@ -1,0 +1,88 @@
+Script started on 2025-04-09 18:19:34+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+Hello, user!
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ mkdir[K[K[K[K[Kcd lab5-tasks/
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ mkdir example-xz
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ c example-xz/[K[K[K[K[K[K[K[K[K[K[K[K[Kcd example-xz/
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ dd if=/dev/urandom of-[K=file1.txt bs =1M count=10
+[?2004l10+0 записей получено
+10+0 записей отправлено
+10485760 байтов (10 MB, 10 MiB) скопировано, 0,0618747 s, 169 MB/s
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ dd if=/dev/urandom of=file1.txt bs=1M count=10[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.txt bs=1[1P[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2.txt bs=[1@1[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l10+0 записей получено
+10+0 записей отправлено
+10485760 байтов (10 MB, 10 MiB) скопировано, 0,0687342 s, 153 MB/s
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ dd if=/dev/urandom of=file2.txt bs=1M count=10[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.txt bs=1[1P[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C3.txt bs=[1@1[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C bs=1[1P[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C bs=1M[1P count=10[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C bs=1M [1Pcount=10[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd bs=1M count=10[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co bs=1M count=10[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc bs=[1@1[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l10+0 записей получено
+10+0 записей отправлено
+10485760 байтов (10 MB, 10 MiB) скопировано, 0,0698464 s, 150 MB/s
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ dd if=/dev/urandom of=file3.doc bs=1M count=10[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2.txt
+[C[C[C[C[C[C[C[C[C[C[C[C[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1
+[C[C[C[C[C[C[C[C[C[C[C[C[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2
+[C[C[C[C[C[C[C[C[C[C[C[C[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C3.doc
+[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.doc bs=1[1P[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4.doc bs=[1@1[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l10+0 записей получено
+10+0 записей отправлено
+10485760 байтов (10 MB, 10 MiB) скопировано, 0,0704467 s, 149 MB/s
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [K]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [K]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [K]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [K]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ xz -k example-xz/file1.txt
+[?2004lxz: example-xz/file1.txt: Нет такого файла или каталога
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ cd ..
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ cd[K[Kcd ..xz -k example-xz/file1.txt
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ xz[K[Ktar -cf [K - exap[Kmple=[K-xz/ | xz > example-xz.tar.x z
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ s[Ktar -cf - example-xz/ | xz _T[K[K-T3 > example-xz-threade d.tar.xz
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ tar -cf - xam[K[Kex[K[K[Kexample-xz/*.doc | xz > example-xz-docs.tar.xz
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ tar -tf example-xz-docs.tar.xz
+[?2004lexample-xz/file3.doc
+example-xz/file4.doc
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ cd example-xz/
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ ls
+[?2004lfile1.txt  [0m[01;31mfile1.txt.xz[0m  file2.txt  file3.doc  file4.doc
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ lscd example-xz/tar -tf example-xz-docs.tar.xzcf - example-xz/*.doc | xz > example-xz-docs.tar.xz[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | xz -T3 > example-xz-threaded.tar.xz[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4P> example-xz.tar.xz
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[20Pxz -k example-xz/file1.txtcd[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd example.xz..[Kxz -k example-xz/file1.txtdd if=/dev/urandom of=file4.doc bs=1M count=103[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[20Pxz -k example-xz/file1.txtcd ..[Kexample.xztar -cf - example-xz/ | xz > example-xz.tar.xz-T3 > example-xz-threaded.tar.xz[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C*.doc | xz > example-xz-docs.t[3Par.xz[A]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ [C[C[C[C[C[20Ptf example-xz-docs.tar.xz
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pcd example-xz/ls[K[Klscd example-xz/tar -tf example-xz-docs.tar.xz
+[?2004ltar: example-xz-docs.tar.xz: Функция open завершилась с ошибкой: Нет такого файла или каталога
+tar: Error is not recoverable: exiting now
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ ls
+[?2004lfile1.txt  [0m[01;31mfile1.txt.xz[0m  file2.txt  file3.doc  file4.doc
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ lstar -tf example-xz-docs.tar.xzls[K[Kls[Kls[Kls
+[?2004lfile1.txt  [0m[01;31mfile1.txt.xz[0m  file2.txt  file3.doc  file4.doc
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ cx[Kd ..[K[K[K[K[Kls
+[?2004l[0m[01;31mexample-xz-docs.tar.xz[0m  [01;31mexample-xz-threaded.tar.xz[0m  [01;31mfile1.txt.xz[0m  file3.doc
+[01;31mexample-xz.tar.xz[0m       file1.txt                   file2.txt     file4.doc
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ xz -d example-xz-docs.tar.xz
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ ls
+[?2004l[0m[01;31mexample-xz-docs.tar[0m  [01;31mexample-xz-threaded.tar.xz[0m  [01;31mfile1.txt.xz[0m  file3.doc
+[01;31mexample-xz.tar.xz[0m    file1.txt                   file2.txt     file4.doc
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ tar -xf example-xz-docs.tar example.[K-xz/file3.doc
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ tar -cf - exap[Kmple-xz | xz > example-xz.tar.xz
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ tar -cf - exapm[K[Kmple=[K-xz | xz -0[K9 > example=h[K[K-h[Kxz-high.tar .xz
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ tar -cf e example.x[K[K-xz | xz -T2 > example-xz-multi.t ar.xz
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ tar -tf example-xz.tar.xz
+[?2004lexample-xz/
+example-xz/file3.doc
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks/example-xz[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks/example-xz[00m$ m[Kcd ..
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ mkdir rsync-backup temp
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ cp request.txt letter.txt order.txt rsync-backup/
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ rsync -av rsync-backup/ temp/
+[?2004lsending incremental file list
+./
+letter.txt
+order.txt
+request.txt
+
+sent 16.591 bytes  received 76 bytes  33.334,00 bytes/sec
+total size is 16.339  speedup is 0,98
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ echo "New string" >> tsync=[K[K[K[K[Kr[K[Krsync-backup/t[Kletter.txt
+[?2004l[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ Aecho "New string" >> rsync-backup/letter.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Prsync -av rsync-backup/ temp/
+[?2004lsending incremental file list
+letter.txt
+
+sent 13.853 bytes  received 35 bytes  27.776,00 bytes/sec
+total size is 16.350  speedup is 1,18
+[?2004h]0;user@user-VirtualBox: ~/lab5-tasks[01;32muser@user-VirtualBox[00m:[01;34m~/lab5-tasks[00m$ scr[K[K[Kexit[K[K[K[Kcd ..
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2025-04-09 18:37:47+03:00 [COMMAND_EXIT_CODE="0"]
