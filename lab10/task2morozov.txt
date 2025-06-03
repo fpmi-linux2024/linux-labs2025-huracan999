@@ -1,0 +1,1484 @@
+Script started on 2025-06-03 22:50:04+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+Hello, user!
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ыгвщ[K[K[K[Ksudo mkswap /dev/sdv[Kb1
+[?2004l[sudo] пароль для user: 
+mkswap: невозможно открыть /dev/sdb1: Нет такого файла или каталога
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkswap /dev/sdb1[C[C[K
+[?2004lSetting up swapspace version 1, size = 30 GiB (32212250624 bytes)
+без метки, UUID=f9f0ba1f-d5c0-4bba-90a0-ad2b2d8e6c60
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo swapon /dev/sdb
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo swapon --show
+[?2004lNAME      TYPE      SIZE USED PRIO
+/swap.img file      3,8G 1,8M   -2
+/dev/sdb  partition  30G   0B   -3
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo swapoff /dev/sdb
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo swapoff /dev/sdb[3Pn --show
+[?2004lNAME      TYPE SIZE USED PRIO
+/swap.img file 3,8G 1,3M   -2
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkswap /deb/[K[Kv/sb[Kdb
+[?2004lmkswap: /dev/sdb: предупреждение: очистка старой сигнатуры swap.
+Setting up swapspace version 1, size = 30 GiB (32212250624 bytes)
+без метки, UUID=1bcd147c-4c53-451d-a986-7edd5a04d84d
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fcs[K[Ksck -v -f -c /dev/d[Ksdb1[K
+[?2004lfsck из util-linux 2.39.3
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.ext4 -L desired_ext4_label /dev/sdb
+[?2004lВнимание: метка слишком длинная; будет усечена до 'desired_ext4_lab'
+
+mke2fs 1.47.0 (5-Feb-2023)
+/dev/sdb contains a swap file system
+Proceed anyway? (y,N) y
+Creating filesystem with 7864320 4k blocks and 1966080 inodes
+Filesystem UUID: d47ca2df-16ff-4f6b-8dec-6d15f2732fdb
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+	4096000
+
+Allocating group tables:   0/240       done                            
+Сохранение таблицы inod'ов:   0/240       done                            
+Создание журнала (32768 блоков): готово
+Writing superblocks and filesystem accounting information:   0/240       готово
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo blkid /dev/sdb
+[?2004l/dev/sdb: LABEL="desired_ext4_lab" UUID="d47ca2df-16ff-4f6b-8dec-6d15f2732fdb" BLOCK_SIZE="4096" TYPE="ext4"
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo tune2fs -j/dev/sdb /dev/sdb
+[?2004ltune2fs 1.47.0 (5-Feb-2023)
+The filesystem already has a journal.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo tune2fs -l /dev/sdb
+[?2004ltune2fs 1.47.0 (5-Feb-2023)
+Filesystem volume name:   desired_ext4_lab
+Last mounted on:          <not available>
+Filesystem UUID:          d47ca2df-16ff-4f6b-8dec-6d15f2732fdb
+Filesystem magic number:  0xEF53
+Filesystem revision #:    1 (dynamic)
+Filesystem features:      has_journal ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Filesystem flags:         signed_directory_hash 
+Default mount options:    user_xattr acl
+Filesystem state:         clean
+Errors behavior:          Continue
+Filesystem OS type:       Linux
+Inode count:              1966080
+Block count:              7864320
+Reserved block count:     393216
+Overhead clusters:        167447
+Free blocks:              7696867
+Free inodes:              1966069
+First block:              0
+Block size:               4096
+Fragment size:            4096
+Group descriptor size:    64
+Reserved GDT blocks:      1024
+Blocks per group:         32768
+Fragments per group:      32768
+Inodes per group:         8192
+Inode blocks per group:   512
+Flex block group size:    16
+Filesystem created:       Tue Jun  3 22:52:39 2025
+Last mount time:          n/a
+Last write time:          Tue Jun  3 22:52:39 2025
+Mount count:              0
+Maximum mount count:      -1
+Last checked:             Tue Jun  3 22:52:39 2025
+Check interval:           0 (<none>)
+Lifetime writes:          4178 kB
+Reserved blocks uid:      0 (user root)
+Reserved blocks gid:      0 (group root)
+First inode:              11
+Inode size:	          256
+Required extra isize:     32
+Desired extra isize:      32
+Journal inode:            8
+Default directory hash:   half_md4
+Directory Hash Seed:      690069c1-8a52-47d1-bedb-90b9197e2505
+Journal backup:           inode blocks
+Checksum type:            crc32c
+Checksum:                 0x9714bf78
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo dd if-[K=/dev/sdb of=/dev/sdb2b[K bs-4[K[K=4M status=progress
+[?2004l1300234240 байтов (1,3 GB, 1,2 GiB) скопировано, 1 s, 1,3 GB/s
+dd: ошибка записи '/dev/sdb2': На устройстве не осталось свободного места
+481+0 записей получено
+480+0 записей отправлено
+2014162944 байтов (2,0 GB, 1,9 GiB) скопировано, 1,5659 s, 1,3 GB/s
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsblk
+[?2004lNAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0  73,9M  1 loop /snap/core22/1802
+loop2    7:2    0  73,9M  1 loop /snap/core22/1963
+loop3    7:3    0 242,4M  1 loop /snap/firefox/5987
+loop4    7:4    0 269,8M  1 loop /snap/firefox/4793
+loop5    7:5    0  10,7M  1 loop /snap/firmware-updater/127
+loop6    7:6    0  11,1M  1 loop /snap/firmware-updater/167
+loop7    7:7    0 505,1M  1 loop /snap/gnome-42-2204/176
+loop8    7:8    0   516M  1 loop /snap/gnome-42-2204/202
+loop9    7:9    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop10   7:10   0   1,1G  1 loop /snap/libreoffice/342
+loop11   7:11   0   1,1G  1 loop /snap/libreoffice/344
+loop12   7:12   0  10,5M  1 loop /snap/snap-store/1173
+loop13   7:13   0  10,8M  1 loop /snap/snap-store/1270
+loop14   7:14   0  44,4M  1 loop /snap/snapd/23771
+loop15   7:15   0  50,9M  1 loop /snap/snapd/24505
+loop16   7:16   0   500K  1 loop /snap/snapd-desktop-integration/178
+loop17   7:17   0   568K  1 loop /snap/snapd-desktop-integration/253
+sda      8:0    0    25G  0 disk 
+├─sda1   8:1    0     1M  0 part 
+└─sda2   8:2    0    25G  0 part /
+sdb      8:16   0    30G  0 disk 
+sr0     11:0    1  1024M  0 rom  
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsblksudo dd if=/dev/sdb of=/dev/sdb2 bs=4M status=progress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clsblk[K[Ks[Kg[Ksudo gparted /dev/sdb
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+^C
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo gparted /dev/sdblsblk[Ksudo gparted /dev/sdb
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ыгщ [K[K[K[Ksudo fdisk /e[Kdev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+[31mThe device contains 'ext4' signature and it will be removed by a write command. See fdisk(8) man page and --wipe option for more details.[0m
+
+Устройство не содержит стандартной таблицы разделов.
+Created a new DOS (MBR) disklabel with disk identifier 0x568e82c6.
+
+[?2004hКоманда (m для справки): g
+[?2004lСоздана новая метка диска GPT (GUID: 7054A28F-C280-44F8-B4DE-7F04820B1EB1).
+[31mThe device contains 'ext4' signature and it will be removed by a write command. See fdisk(8) man page and --wipe option for more details.[0m
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (1-128, по умолчанию 1): 1
+[?2004l[?2004hПервый сектор (2048-62914526, по умолчанию 2048): Enter
+[?2004l[31mЗначение за пределами диапазона.[0m
+[?2004hПервый сектор (2048-62914526, по умолчанию 2048): +5g[KG
+[?2004l[31mЗначение за пределами диапазона.[0m
+[?2004hПервый сектор (2048-62914526, по умолчанию 2048): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (2048-62914526, по умолчанию 62912511): +5G
+[?2004l
+Создан новый раздел 1 с типом 'Linux filesystem' и размером 5 GiB.
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (2-128, по умолчанию 2): 2
+[?2004l[?2004hПервый сектор (10487808-62914526, по умолчанию 10487808): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (10487808-62914526, по умолчанию 62912511): 
+[?2004l
+Создан новый раздел 2 с типом 'Linux filesystem' и размером 25 GiB.
+
+[?2004hКоманда (m для справки): p
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 7054A28F-C280-44F8-B4DE-7F04820B1EB1
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 10487807 10485760     5G Файловая система Linux
+/dev/sdb2  10487808 62912511 52424704    25G Файловая система Linux
+
+[?2004hКоманда (m для справки): [?2004l[?2004h
+All unwritten changes will be lost, do you really want to quit? (y/n)y
+[?2004l
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fdisk /dev/sdb[2@gparted[C[C[C[C[C[C[C[C[Clsblk[Ksudo dd if=/dev/sdb of=/dev/sdb2 bs=4M status=progress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[30Ptune2fs -l /dev/sdbdd if=/dev/sdb of=/dev/sdb2 bs=4M status=progress[C[C[C[1@1
+[?2004ldd: не удалось открыть '/dev/sdb1': Нет такого файла или каталога
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo dd if=/dev/sdb1 of=/dev/sdb2 bs=4M status=progress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfdisk /dev/sdb[K[2@gparted[C[C[C[C[C[C[C[C[C[2Pfdisk[C[C[C[C[C[C[C[C[C
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+[31mThe device contains 'ext4' signature and it will be removed by a write command. See fdisk(8) man page and --wipe option for more details.[0m
+
+Устройство не содержит стандартной таблицы разделов.
+Created a new DOS (MBR) disklabel with disk identifier 0xd81491a5.
+
+[?2004hКоманда (m для справки): p
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: dos
+Идентификатор диска: 0xd81491a5
+
+[?2004hКоманда (m для справки): g
+[?2004lСоздана новая метка диска GPT (GUID: 98648C3B-1064-4EF7-A576-328DB6A68331).
+[31mThe device contains 'ext4' signature and it will be removed by a write command. See fdisk(8) man page and --wipe option for more details.[0m
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (1-128, по умолчанию 1): 1
+[?2004l[?2004hПервый сектор (2048-62914526, по умолчанию 2048): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (2048-62914526, по умолчанию 62912511): +5[K13G
+[?2004l
+Создан новый раздел 1 с типом 'Linux filesystem' и размером 13 GiB.
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (2-128, по умолчанию 2): 2
+[?2004l[?2004hПервый сектор (27265024-62914526, по умолчанию 27265024): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (27265024-62914526, по умолчанию 62912511): 13[K[K+13G
+[?2004l
+Создан новый раздел 2 с типом 'Linux filesystem' и размером 13 GiB.
+
+[?2004hКоманда (m для справки): p
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 98648C3B-1064-4EF7-A576-328DB6A68331
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 27265023 27262976    13G Файловая система Linux
+/dev/sdb2  27265024 54527999 27262976    13G Файловая система Linux
+
+[?2004hКоманда (m для справки): w
+[?2004lТаблица разделов была изменена.
+Вызывается ioctl() для перечитывания таблицы разделов.
+Синхронизируются диски.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fdisk /dev/sdbdd if=/dev/sdb1 of=/dev/sdb2 bs=4M status=progress
+[?2004l964689920 байтов (965 MB, 920 MiB) скопировано, 1 s, 964 MB/s1619001344 байтов (1,6 GB, 1,5 GiB) скопировано, 2 s, 809 MB/s
+dd: ошибка записи '/dev/sdb2': На устройстве не осталось свободного места
+481+0 записей получено
+480+0 записей отправлено
+2014162944 байтов (2,0 GB, 1,9 GiB) скопировано, 2,91624 s, 691 MB/s
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo blkid /deb[Kv/sdb1
+[?2004l/dev/sdb1: PARTUUID="d56642c6-8a8b-40e8-b60f-4056cd7a30ff"
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo blkid /dev/sdb1[K2
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo blkid /dev/sdb21dd if=/dev/sdb1 of=/dev/sdb2 bs=4M status=progress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfdisk /dev/sdb[Kdd if=/dev/sdb1 of=/dev/sdb2 bs=4M status=progress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfdisk /dev/sdb[K
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+
+[?2004hКоманда (m для справки): [?2004l
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fdisk /dev/sdbblkid /dev/sdb2[1Pfdisk /dev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+
+[?2004hКоманда (m для справки): з
+[?2004l[31m�: неизвестная команда[0m
+
+[?2004hКоманда (m для справки): p
+[?2004l[1m
+Диск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 98648C3B-1064-4EF7-A576-328DB6A68331
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 27265023 27262976    13G Файловая система Linux
+/dev/sdb2  27265024 54527999 27262976    13G Файловая система Linux
+
+[?2004hКоманда (m для справки): d
+[?2004l[?2004hНомер раздела (1,2, по умолчанию 2): 1
+[?2004l
+Раздел 1 был удален.
+
+[?2004hКоманда (m для справки): d
+[?2004lВыбранный раздел 2
+Раздел 2 был удален.
+
+[?2004hКоманда (m для справки): 2[Kp[Kp
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 98648C3B-1064-4EF7-A576-328DB6A68331
+
+[?2004hКоманда (m для справки): g
+[?2004lСоздана новая метка диска GPT (GUID: 0748872B-96DC-4044-894F-A97207B17196).
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (1-128, по умолчанию 1): 1
+[?2004l[?2004hПервый сектор (2048-62914526, по умолчанию 2048): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (2048-62914526, по умолчанию 62912511): 12[K[K+12G
+[?2004l
+Создан новый раздел 1 с типом 'Linux filesystem' и размером 12 GiB.
+
+[?2004hКоманда (m для справки): g[Kn
+[?2004l[?2004hНомер раздела (2-128, по умолчанию 2): 2
+[?2004l[?2004hПервый сектор (25167872-62914526, по умолчанию 25167872): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (25167872-62914526, по умолчанию 62912511): 14[K[K+14G
+[?2004l
+Создан новый раздел 2 с типом 'Linux filesystem' и размером 14 GiB.
+
+[?2004hКоманда (m для справки): w
+[?2004lТаблица разделов была изменена.
+Вызывается ioctl() для перечитывания таблицы разделов.
+Синхронизируются диски.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ p[Ksudo fdisk /dev/sdbblkid /dev/sdb21dd if=/dev/sdb1 of=/dev/sdb2 bs=4M status=progress
+[?2004l985661440 байтов (986 MB, 940 MiB) скопировано, 1 s, 982 MB/s1673527296 байтов (1,7 GB, 1,6 GiB) скопировано, 2 s, 833 MB/s
+dd: ошибка записи '/dev/sdb2': На устройстве не осталось свободного места
+481+0 записей получено
+480+0 записей отправлено
+2014162944 байтов (2,0 GB, 1,9 GiB) скопировано, 2,82649 s, 713 MB/s
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkdir /mnt/dos[Kcs1
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ 1[Ksudo mkdir /mnt/docs1[K2
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkdir /mnt/docs2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmount /ev/[K[K[Kdev/sdb1 /mnt/docs1
+[?2004lmount: /mnt/docs1: wrong fs type, bad option, bad superblock on /dev/sdb1, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/sdb1 /mnt/docs1[K2[1P /mnt/docs22 /mnt/docs2
+[?2004lmount: /mnt/docs2: wrong fs type, bad option, bad superblock on /dev/loop18, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -h
+[?2004lФайл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            392M         1,7M  390M            1% /run
+/dev/sda2         25G          16G  7,7G           67% /
+tmpfs            2,0G            0  2,0G            0% /dev/shm
+tmpfs            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs            392M         220K  392M            1% /run/user/1000
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsblk
+[?2004lNAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0  73,9M  1 loop /snap/core22/1802
+loop2    7:2    0  73,9M  1 loop /snap/core22/1963
+loop3    7:3    0 242,4M  1 loop /snap/firefox/5987
+loop4    7:4    0 269,8M  1 loop /snap/firefox/4793
+loop5    7:5    0  10,7M  1 loop /snap/firmware-updater/127
+loop6    7:6    0  11,1M  1 loop /snap/firmware-updater/167
+loop7    7:7    0 505,1M  1 loop /snap/gnome-42-2204/176
+loop8    7:8    0   516M  1 loop /snap/gnome-42-2204/202
+loop9    7:9    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop10   7:10   0   1,1G  1 loop /snap/libreoffice/342
+loop11   7:11   0   1,1G  1 loop /snap/libreoffice/344
+loop12   7:12   0  10,5M  1 loop /snap/snap-store/1173
+loop13   7:13   0  10,8M  1 loop /snap/snap-store/1270
+loop14   7:14   0  44,4M  1 loop /snap/snapd/23771
+loop15   7:15   0  50,9M  1 loop /snap/snapd/24505
+loop16   7:16   0   500K  1 loop /snap/snapd-desktop-integration/178
+loop17   7:17   0   568K  1 loop /snap/snapd-desktop-integration/253
+sda      8:0    0    25G  0 disk 
+├─sda1   8:1    0     1M  0 part 
+└─sda2   8:2    0    25G  0 part /
+sdb      8:16   0    30G  0 disk 
+├─sdb1   8:17   0    12G  0 part 
+└─sdb2   8:18   0    14G  0 part 
+sr0     11:0    1  1024M  0 rom  
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsblkdf -hsudo mount /dev/sdb2 /mnt/docs21 /mnt/docs1
+[?2004lmount: /mnt/docs1: wrong fs type, bad option, bad superblock on /dev/sdb1, missing codepage or helper program, or other error.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo mkfs.ext4 /dev/sdb1 [27m[1Psudo mkfs.ext4 /dev/sdb1
+[?2004lmke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 3145728 4k blocks and 786432 inodes
+Filesystem UUID: 095a1731-6a02-4c32-b3e3-0992c19cbb49
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
+
+Allocating group tables:  0/96     done                            
+Сохранение таблицы inod'ов:  0/96     done                            
+Создание журнала (16384 блоков): готово
+Writing superblocks and filesystem accounting information:  0/96     готово
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.ext4 /dev/sdb1[K2
+[?2004lmke2fs 1.47.0 (5-Feb-2023)
+Discarding device blocks:      0/491520             done                            
+Creating filesystem with 491520 4k blocks and 123120 inodes
+Filesystem UUID: 0882c7d3-f2ec-4c18-8f14-523417386afb
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/15     done                            
+Сохранение таблицы inod'ов:  0/15     done                            
+Создание журнала (8192 блоков): готово
+Writing superblocks and filesystem accounting information:  0/15     готово
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.ext4 /dev/sdb21ount /dev/sdb1 /mnt/docs1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clsblk[Ksudo mount /dev/sdb1 /mnt/docs1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clsblk[Kdf -hlsblksudo mount /dev/sdb1 /mnt/docs1
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/sdb1 /mnt/docs1[7Pkfs.ext4 /dev/sdb21ount /dev/sdb1 /mnt/docs1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clsblk[Kdf -hsudo mount /dev/sdb2 /mnt/docs2
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ в[Kdf -h
+[?2004lФайл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            392M         1,7M  390M            1% /run
+/dev/sda2         25G          16G  7,7G           67% /
+tmpfs            2,0G            0  2,0G            0% /dev/shm
+tmpfs            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs            392M         228K  392M            1% /run/user/1000
+/dev/sdb1         12G          24K   12G            1% /mnt/docs1
+/dev/loop18      1,9G          24K  1,7G            1% /mnt/docs2
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ gp[Kparted
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+ls  ^C
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsblk
+[?2004lNAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0  73,9M  1 loop /snap/core22/1802
+loop2    7:2    0  73,9M  1 loop /snap/core22/1963
+loop3    7:3    0 242,4M  1 loop /snap/firefox/5987
+loop4    7:4    0 269,8M  1 loop /snap/firefox/4793
+loop5    7:5    0  10,7M  1 loop /snap/firmware-updater/127
+loop6    7:6    0  11,1M  1 loop /snap/firmware-updater/167
+loop7    7:7    0 505,1M  1 loop /snap/gnome-42-2204/176
+loop8    7:8    0   516M  1 loop /snap/gnome-42-2204/202
+loop9    7:9    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop10   7:10   0   1,1G  1 loop /snap/libreoffice/342
+loop11   7:11   0   1,1G  1 loop /snap/libreoffice/344
+loop12   7:12   0  10,5M  1 loop /snap/snap-store/1173
+loop13   7:13   0  10,8M  1 loop /snap/snap-store/1270
+loop14   7:14   0  44,4M  1 loop /snap/snapd/23771
+loop15   7:15   0  50,9M  1 loop /snap/snapd/24505
+loop16   7:16   0   500K  1 loop /snap/snapd-desktop-integration/178
+loop17   7:17   0   568K  1 loop /snap/snapd-desktop-integration/253
+loop18   7:18   0   1,9G  0 loop /mnt/docs2
+sda      8:0    0    25G  0 disk 
+├─sda1   8:1    0     1M  0 part 
+└─sda2   8:2    0    25G  0 part /
+sdb      8:16   0    30G  0 disk 
+├─sdb1   8:17   0    12G  0 part /mnt/docs1
+└─sdb2   8:18   0    14G  0 part 
+sr0     11:0    1  1024M  0 rom  
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fd[Kdisk /dev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+[31mThis disk is currently in use - repartitioning is probably a bad idea.
+It's recommended to umount all file systems, and swapoff all swap
+partitions on this disk.
+[0m
+
+[?2004hКоманда (m для справки): p
+[?2004l[1m
+Диск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 0748872B-96DC-4044-894F-A97207B17196
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 25167871 25165824    12G Файловая система Linux
+/dev/sdb2  25167872 54527999 29360128    14G Файловая система Linux
+
+[?2004hКоманда (m для справки): o
+[?2004lCreated a new DOS (MBR) disklabel with disk identifier 0xdbff4f60.
+[31mThe device contains 'gpt' signature and it will be removed by a write command. See fdisk(8) man page and --wipe option for more details.[0m
+
+[?2004hКоманда (m для справки): sudo fdisk /dev/sdb
+[?2004l
+Создан новый раздел 1 с типом 'Linux native' и размером 30 GiB.
+Создан новый раздел 2 с типом 'Linux swap' и размером 47,1 MiB.
+Создан новый раздел 3 с типом 'Whole disk' и размером 30 GiB.
+Создана новая метка диска Sun.
+[31mThe device contains 'gpt' signature and it will be removed by a write command. See fdisk(8) man page and --wipe option for more details.[0m
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (4-8, по умолчанию 4): 4
+[?2004l
+Весь диск уже занят другими разделами. Удалите или уменьшите некоторые из них перед повторной попыткой.
+
+[?2004hКоманда (m для справки): [?2004l[?2004h
+All unwritten changes will be lost, do you really want to quit? (y/n)н[Ky[Kn
+[?2004l
+[?2004hКоманда (m для справки): write
+[?2004lТаблица разделов была изменена.
+[31mFailed to remove partition 1 from system: Устройство или ресурс занято
+[0m[31mFailed to add partition 1 to system: Устройство или ресурс занято
+[0m[31mFailed to add partition 3 to system: Устройство или ресурс занято
+[0m
+Ядро всё ещё использует старые разделы. Новая таблица будет задействована при следующей перезагрузке. 
+Синхронизируются диски.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ n[Kgparted
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+CHS геометрия диска (123361,255,2) предоставленная операционной системой не совпадает с геометрией, которая содержится в метке диска (3916,255,63).
+Был записан раздел(ы) 1 на /dev/sdb, но об этом изменении не удалось проинформировать ядро, вероятно, из-за занятости раздела. В результате старый раздел всё ещё используется. Чтобы выполнить дальнейшие изменения вам нужно перезагрузить систему.
+CHS геометрия диска (123361,255,2) предоставленная операционной системой не совпадает с геометрией, которая содержится в метке диска (3916,255,63).
+CHS геометрия диска (123361,255,2) предоставленная операционной системой не совпадает с геометрией, которая содержится в метке диска (3916,255,63).
+CHS геометрия диска (123361,255,2) предоставленная операционной системой не совпадает с геометрией, которая содержится в метке диска (3916,255,63).
+/dev/sdb: метка диска не определена
+/dev/sdb: метка диска не определена
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ fgpartedsudo fdisk /dev/sdblsblk[Kgparted[2Pdf -hsudo mount /dev/sdb2 /mnt/docs21 /mnt/docs1[7Pkfs.ext4 /dev/sdb21ount /dev/sdb1 /mnt/docs1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clsblk[Kdf -hsudo mount /dev/sdb2 /mnt/docs21 /mnt/docs1[10Pkdir /mnt/docs21dd if=/dev/sdb1 of=/dev/sdb2 bs=4M status=progress[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfdisk /dev/sdb[Kblkid /dev/sdb212[1Pfdisk /dev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+Устройство не содержит стандартной таблицы разделов.
+Created a new DOS (MBR) disklabel with disk identifier 0xab47ea6d.
+
+[?2004hКоманда (m для справки): g
+[?2004lСоздана новая метка диска GPT (GUID: 3E72C147-08D1-4576-B531-25C629CE9454).
+
+[?2004hКоманда (m для справки): p[Kp
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 3E72C147-08D1-4576-B531-25C629CE9454
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (1-128, по умолчанию 1): 1
+[?2004l[?2004hПервый сектор (2048-62914526, по умолчанию 2048): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (2048-62914526, по умолчанию 62912511): +1-[K0G
+[?2004l
+Создан новый раздел 1 с типом 'Linux filesystem' и размером 10 GiB.
+[31mРаздел #1 содержит сигнатуру ext4.[0m
+
+Удалить сигнатуру?[?2004h [Y] Да/[N] Нет: Y
+[?2004l
+Сигнатура будет удалена командой записи.
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (2-128, по умолчанию 2): 2
+[?2004l[?2004hПервый сектор (20973568-62914526, по умолчанию 20973568): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (20973568-62914526, по умолчанию 62912511): +5[K10G
+[?2004l
+Создан новый раздел 2 с типом 'Linux filesystem' и размером 10 GiB.
+
+[?2004hКоманда (m для справки): w
+[?2004lТаблица разделов была изменена.
+Вызывается ioctl() для перечитывания таблицы разделов.
+Синхронизируются диски.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fdisk /dev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+
+[?2004hКоманда (m для справки): p
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 3E72C147-08D1-4576-B531-25C629CE9454
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 20973567 20971520    10G Файловая система Linux
+/dev/sdb2  20973568 41945087 20971520    10G Файловая система Linux
+
+[?2004hКоманда (m для справки): w
+[?2004lТаблица разделов была изменена.
+Вызывается ioctl() для перечитывания таблицы разделов.
+Синхронизируются диски.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fdisk /dev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (3-128, по умолчанию 3): 3
+[?2004l[?2004hПервый сектор (41945088-62914526, по умолчанию 41945088): 2048
+[?2004l[31mЗначение за пределами диапазона.[0m
+[?2004hПервый сектор (41945088-62914526, по умолчанию 41945088): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (41945088-62914526, по умолчанию 62912511): +40[KG
+[?2004l
+Создан новый раздел 3 с типом 'Linux filesystem' и размером 4 GiB.
+
+[?2004hКоманда (m для справки): t
+[?2004l[?2004hНомер раздела (1-3, по умолчанию 3): 3
+[?2004l[?2004hPartition type or alias (type L to list all): 82
+[?2004l
+Тип раздела 'Linux filesystem' изменен на 'Linux root verity (S390)'.
+
+[?2004hКоманда (m для справки): p
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 3E72C147-08D1-4576-B531-25C629CE9454
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 20973567 20971520    10G Файловая система Linux
+/dev/sdb2  20973568 41945087 20971520    10G Файловая система Linux
+/dev/sdb3  41945088 50333695  8388608     4G Linux root verity (S390)
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (4-128, по умолчанию 4): e
+[?2004l[31mЗначение за пределами диапазона.[0m
+[?2004hНомер раздела (4-128, по умолчанию 4): 4
+[?2004l[?2004hПервый сектор (50333696-62914526, по умолчанию 50333696): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (50333696-62914526, по умолчанию 62912511): 
+[?2004l
+Создан новый раздел 4 с типом 'Linux filesystem' и размером 6 GiB.
+
+[?2004hКоманда (m для справки): p
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 3E72C147-08D1-4576-B531-25C629CE9454
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 20973567 20971520    10G Файловая система Linux
+/dev/sdb2  20973568 41945087 20971520    10G Файловая система Linux
+/dev/sdb3  41945088 50333695  8388608     4G Linux root verity (S390)
+/dev/sdb4  50333696 62912511 12578816     6G Файловая система Linux
+
+[?2004hКоманда (m для справки): o[Kp
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 3E72C147-08D1-4576-B531-25C629CE9454
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 20973567 20971520    10G Файловая система Linux
+/dev/sdb2  20973568 41945087 20971520    10G Файловая система Linux
+/dev/sdb3  41945088 50333695  8388608     4G Linux root verity (S390)
+/dev/sdb4  50333696 62912511 12578816     6G Файловая система Linux
+
+[?2004hКоманда (m для справки): [?2004l[?2004h
+All unwritten changes will be lost, do you really want to quit? (y/n)n
+[?2004l
+[?2004hКоманда (m для справки): w
+[?2004lТаблица разделов была изменена.
+Вызывается ioctl() для перечитывания таблицы разделов.
+Синхронизируются диски.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.ext4 -L newdisk1 /ev[K[Kdev/sdb4
+[?2004lmke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 1572352 4k blocks and 393216 inodes
+Filesystem UUID: c3137244-3dc4-4300-a235-9943c430e8b0
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+Allocating group tables:  0/48     done                            
+Сохранение таблицы inod'ов:  0/48     done                            
+Создание журнала (16384 блоков): готово
+Writing superblocks and filesystem accounting information:  0/48     готово
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.ext4 -L newdisk1 /dev/sdb4[C[C[C[C[C[K3[C[1P /dev/sdb32 /dev/sdb3
+[?2004lmke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 1048576 4k blocks and 262144 inodes
+Filesystem UUID: 765f3030-dc5a-4dd7-a9b4-e78ce4c17003
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+Allocating group tables:  0/32     done                            
+Сохранение таблицы inod'ов:  0/32     done                            
+Создание журнала (16384 блоков): готово
+Writing superblocks and filesystem accounting information:  0/32     готово
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo gpat[Krted
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+sudo      ^C
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkswap -L new_swap_label /dev/d[Ksdb1
+[?2004lSetting up swapspace version 1, size = 10 GiB (10737414144 bytes)
+LABEL=new_swap_label, UUID=4d3d79c1-8e59-4fcf-86d7-06b9405cd09f
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo swapon /ev[K[Kdev/sdb1
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ swapon --show
+[?2004lNAME      TYPE      SIZE USED PRIO
+/swap.img file      3,8G 1,2G   -2
+/dev/sdb1 partition  10G   0B   -3
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsblk
+[?2004lNAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0  73,9M  1 loop /snap/core22/1802
+loop2    7:2    0  73,9M  1 loop /snap/core22/1963
+loop3    7:3    0 242,4M  1 loop /snap/firefox/5987
+loop4    7:4    0 269,8M  1 loop /snap/firefox/4793
+loop5    7:5    0  10,7M  1 loop /snap/firmware-updater/127
+loop6    7:6    0  11,1M  1 loop /snap/firmware-updater/167
+loop7    7:7    0 505,1M  1 loop /snap/gnome-42-2204/176
+loop8    7:8    0   516M  1 loop /snap/gnome-42-2204/202
+loop9    7:9    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop10   7:10   0   1,1G  1 loop /snap/libreoffice/342
+loop11   7:11   0   1,1G  1 loop /snap/libreoffice/344
+loop12   7:12   0  10,5M  1 loop /snap/snap-store/1173
+loop13   7:13   0  10,8M  1 loop /snap/snap-store/1270
+loop14   7:14   0  44,4M  1 loop /snap/snapd/23771
+loop15   7:15   0  50,9M  1 loop /snap/snapd/24505
+loop16   7:16   0   500K  1 loop /snap/snapd-desktop-integration/178
+loop17   7:17   0   568K  1 loop /snap/snapd-desktop-integration/253
+loop18   7:18   0   1,9G  0 loop /mnt/docs2
+sda      8:0    0    25G  0 disk 
+├─sda1   8:1    0     1M  0 part 
+└─sda2   8:2    0    25G  0 part /
+sdb      8:16   0    30G  0 disk 
+├─sdb1   8:17   0    10G  0 part [SWAP]
+├─sdb2   8:18   0    10G  0 part 
+├─sdb3   8:19   0     4G  0 part 
+└─sdb4   8:20   0     6G  0 part 
+sr0     11:0    1  1024M  0 rom  
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fdisk -l .[K/dev/sdb
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: 3E72C147-08D1-4576-B531-25C629CE9454
+
+[1mУстр-во   [0m [1m  начало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1      2048 20973567 20971520    10G Файловая система Linux
+/dev/sdb2  20973568 41945087 20971520    10G Файловая система Linux
+/dev/sdb3  41945088 50333695  8388608     4G Linux root verity (S390)
+/dev/sdb4  50333696 62912511 12578816     6G Файловая система Linux
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo parted -s /dev/sdb unit mB[K[KMB print
+[?2004lМодель: ATA VBOX HARDDISK (scsi)
+Диск /dev/sdb: 32212MB
+Размер сектора (логич./физич.): 512B/512B
+Таблица разделов: gpt
+Флаги диска: 
+
+Номер  Начало   Конец    Размер   Файловая система  Имя  Флаги
+ 1     1,05MB   10738MB  10737MB  linux-swap(v1)
+ 2     10738MB  21476MB  10737MB
+ 3     21476MB  25771MB  4295MB   ext4
+ 4     25771MB  32211MB  6440MB   ext4
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo parted -s /dev/sdb unit MiB print
+[?2004lМодель: ATA VBOX HARDDISK (scsi)
+Диск /dev/sdb: 30720MiB
+Размер сектора (логич./физич.): 512B/512B
+Таблица разделов: gpt
+Флаги диска: 
+
+Номер  Начало    Конец     Размер    Файловая система  Имя  Флаги
+ 1     1,00MiB   10241MiB  10240MiB  linux-swap(v1)
+ 2     10241MiB  20481MiB  10240MiB
+ 3     20481MiB  24577MiB  4096MiB   ext4
+ 4     24577MiB  30719MiB  6142MiB   ext4
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ =[Ksudo umount /dev/sdb4
+[?2004lumount: /dev/sdb4: not mounted.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo umount /dev/sdb4[K3
+[?2004lumount: /dev/sdb3: not mounted.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.xfs -f -L newkis[K[K[Kdisk1 /ev[K[Kdev/sdb4
+[?2004lsudo: mkfs.xfs: команда не найдена
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.xfs -f -L newdisk1 /dev/sdb4[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo apt install mkfs
+[?2004lЧтение списков пакетов… 0%Чтение списков пакетов… 100%Чтение списков пакетов… Готово
+Построение дерева зависимостей… 0%Построение дерева зависимостей… 0%Построение дерева зависимостей… 50%Построение дерева зависимостей… 50%Построение дерева зависимостей… Готово
+Чтение информации о состоянии… 0%             Чтение информации о состоянии… 0%Чтение информации о состоянии… Готово
+[1;31mE: [0mНевозможно найти пакет mkfs[0m
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ mkfs
+[?2004lmkfs: не указано устройство
+Try 'mkfs --help' for more information.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo apt install e2fsprogs [27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo apt install e2fsprogs 
+[?2004lЧтение списков пакетов… 0%Чтение списков пакетов… 100%Чтение списков пакетов… Готово
+Построение дерева зависимостей… 0%Построение дерева зависимостей… 0%Построение дерева зависимостей… 50%Построение дерева зависимостей… 50%Построение дерева зависимостей… Готово
+Чтение информации о состоянии… 0%             Чтение информации о состоянии… 0%Чтение информации о состоянии… Готово
+Уже установлен пакет e2fsprogs самой новой версии (1.47.0-2.4~exp1ubuntu4.1).
+e2fsprogs помечен как установленный вручную.
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 326 пакетов не обновлено.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo apt install e2fsprogs [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkfs[Ksudo apt install mkfsmkfs[Ksudo apt install mkfsmkfs.xfs -f -L newdisk1 /dev/sdb4
+[?2004lsudo: mkfs.xfs: команда не найдена
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.xfs -f -L newdisk1 /dev/sdb4[1P[1P[1P[1P[1P
+[?2004lКоманда «mkfs.xfs» не найдена, но может быть установлена с помощью:
+sudo apt install xfsprogs
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo apt install xfs[[Kprogs
+[?2004lЧтение списков пакетов… 0%Чтение списков пакетов… 100%Чтение списков пакетов… Готово
+Построение дерева зависимостей… 0%Построение дерева зависимостей… 0%Построение дерева зависимостей… 50%Построение дерева зависимостей… 50%Построение дерева зависимостей… Готово
+Чтение информации о состоянии… 0%             Чтение информации о состоянии… 0%Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  liburcu8t64
+Предлагаемые пакеты:
+  xfsdump attr quota
+Следующие НОВЫЕ пакеты будут установлены:
+  liburcu8t64 xfsprogs
+Обновлено 0 пакетов, установлено 2 новых пакетов, для удаления отмечено 0 пакетов, и 326 пакетов не обновлено.
+Необходимо скачать 964 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 3 417 kB.
+Хотите продолжить? [Д/н] 
+[33m0% [Обработка][0m[33m0% [Обработка][0m                       Пол:1 http://by.archive.ubuntu.com/ubuntu noble/main amd64 liburcu8t64 amd64 0.14.0-3.1build1 [63,0 kB]
+[33m0% [1 liburcu8t64 1 191 B/63,0 kB 2%][0m[33m                                       15% [Обработка][0m                        Пол:2 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 xfsprogs amd64 6.6.0-1ubuntu2.1 [901 kB]
+[33m15% [2 xfsprogs 1 189 B/901 kB 0%][0m[33m                                    85% [2 xfsprogs 845 kB/901 kB 94%][0m[33m                                  100% [Обработка][0m                         Получено 964 kB за 1с (663 kB/s)
+
+7[0;23r8[1AВыбор ранее не выбранного пакета liburcu8t64:amd64.
+(Чтение базы данных … (Чтение базы данных … 5%(Чтение базы данных … 10%(Чтение базы данных … 15%(Чтение базы данных … 20%(Чтение базы данных … 25%(Чтение базы данных … 30%(Чтение базы данных … 35%(Чтение базы данных … 40%(Чтение базы данных … 45%(Чтение базы данных … 50%(Чтение базы данных … 55%(Чтение базы данных … 60%(Чтение базы данных … 65%(Чтение базы данных … 70%(Чтение базы данных … 75%(Чтение базы данных … 80%(Чтение базы данных … 85%(Чтение базы данных … 90%(Чтение базы данных … 95%(Чтение базы данных … 100%(Чтение базы данных … на данный момент установлено 153666 файлов и каталогов.)
+Подготовка к распаковке …/liburcu8t64_0.14.0-3.1build1_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [  0%][49m[39m [....................................................] 87[24;0f[42m[30mХод выполнения: [ 11%][49m[39m [#####...............................................] 8Распаковывается liburcu8t64:amd64 (0.14.0-3.1build1) …
+7[24;0f[42m[30mХод выполнения: [ 22%][49m[39m [###########.........................................] 8Выбор ранее не выбранного пакета xfsprogs.
+Подготовка к распаковке …/xfsprogs_6.6.0-1ubuntu2.1_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 33%][49m[39m [#################...................................] 8Распаковывается xfsprogs (6.6.0-1ubuntu2.1) …
+7[24;0f[42m[30mХод выполнения: [ 44%][49m[39m [#######################.............................] 8Настраивается пакет liburcu8t64:amd64 (0.14.0-3.1build1) …
+7[24;0f[42m[30mХод выполнения: [ 56%][49m[39m [############################........................] 87[24;0f[42m[30mХод выполнения: [ 67%][49m[39m [##################################..................] 8Настраивается пакет xfsprogs (6.6.0-1ubuntu2.1) …
+7[24;0f[42m[30mХод выполнения: [ 78%][49m[39m [########################################............] 8update-initramfs: deferring update (trigger activated)
+7[24;0f[42m[30mХод выполнения: [ 89%][49m[39m [##############################################......] 8Обрабатываются триггеры для man-db (2.12.0-4build2) …
+Обрабатываются триггеры для libc-bin (2.39-0ubuntu8.4) …
+Обрабатываются триггеры для initramfs-tools (0.142ubuntu25.1) …
+update-initramfs: Generating /boot/initrd.img-6.11.0-17-generic
+I: The initramfs will attempt to resume from /dev/sdb1
+I: (UUID=4d3d79c1-8e59-4fcf-86d7-06b9405cd09f)
+I: Set the RESUME variable to override this.
+
+7[0;24r8[1A[J[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo apt install xfsprogsmkfs.xfs -f -L newdisk1 /dev/sdb4
+[?2004lmkfs.xfs: cannot open /dev/sdb4: Отказано в доступе
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ mkfs.xfs -f -L newdisk1 /dev/sdb4[1@s[1@u[1@d[1@p[1@ [1P[1P[1@o[1@ 
+[?2004lmeta-data=/dev/sdb4              isize=512    agcount=4, agsize=393088 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=1
+         =                       reflink=1    bigtime=1 inobtcount=1 nrext64=0
+data     =                       bsize=4096   blocks=1572352, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=16384, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.xfs -f -L newdisk1 /dev/sdb4[1P /dev/sdb42 /dev/sdb4[C[C[C[C[C[C[C[C[C[C[K3
+[?2004lmeta-data=/dev/sdb3              isize=512    agcount=4, agsize=262144 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=1
+         =                       reflink=1    bigtime=1 inobtcount=1 nrext64=0
+data     =                       bsize=4096   blocks=1048576, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=16384, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkdir /media/disk1
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkdir /media/de[Kisk2
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/sdb5[K4 /media/disk1
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/sdb4 /media/disk1[1P /media/disk13 /media/disk1[C[C[C[C[C[C[C[C[C[C[C[C[C[K2
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo blkid /dev/sdb5[K4
+[?2004l/dev/sdb4: LABEL="newdisk1" UUID="16fd7be4-4ee0-401a-8ab3-1070aa9aba56" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="8be35b97-a5f3-45df-a05f-b9badc07539b"
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo blkid /dev/sdb4[K3
+[?2004l/dev/sdb3: LABEL="newdisk2" UUID="1fc43fb6-2b31-4f40-9abd-0665e1c7c60f" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="9965ab8c-62c1-4a3e-bb01-006cc99346d3"
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -h
+[?2004lФайл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            392M         1,7M  390M            1% /run
+/dev/sda2         25G          16G  7,7G           67% /
+tmpfs            2,0G            0  2,0G            0% /dev/shm
+tmpfs            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs            392M         236K  392M            1% /run/user/1000
+/dev/loop18      1,9G          24K  1,7G            1% /mnt/docs2
+/dev/sdb4        6,0G         149M  5,8G            3% /media/disk1
+/dev/sdb3        4,0G         110M  3,9G            3% /media/disk2
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ~sudo [K[K[K[K[K[Ksudo umount /media/disk1
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo umount /media/disk1[C[K2
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo umount /dev/sdb1
+[?2004lumount: /dev/sdb1: not mounted.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ 1[Ksudo umount /dev/sdb1[K4
+[?2004lumount: /dev/sdb4: not mounted.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo umount /dev/sdb4[K3
+[?2004lumount: /dev/sdb3: not mounted.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo parted /dev/sdb
+[?2004lGNU Parted 3.6
+Используется /dev/sdb
+Добро пожаловать в GNU Parted! Наберите 'help' для просмотра списка команд.
+                                                                          [?2004h(parted) print
+[?2004lМодель: ATA VBOX HARDDISK (scsi)
+Диск /dev/sdb: 32,2GB
+Размер сектора (логич./физич.): 512B/512B
+Таблица разделов: gpt
+Флаги диска: 
+
+Номер  Начало  Конец   Размер  Файловая система  Имя  Флаги
+ 1     1049kB  10,7GB  10,7GB  linux-swap(v1)
+ 2     10,7GB  21,5GB  10,7GB
+ 3     21,5GB  25,8GB  4295MB  xfs
+ 4     25,8GB  32,2GB  6440MB  xfs
+
+                                                                          [?2004h(parted) rm 1
+[?2004lПредупреждение: Раздел /dev/sdb1 используется. Вы уверены что хотите продолжить?
+
+                                                                                                                                                    [?2004hДа/Yes/Нет/No? 
+[?2004l                                                                          [?2004hДа/Yes/Нет/No? Yes
+[?2004lОшибка: Был записан раздел(ы) 1 на /dev/sdb, но об этом изменении не удалось
+проинформировать ядро, вероятно, из-за занятости раздела. В результате старый
+раздел всё ещё используется. Чтобы выполнить дальнейшие изменения вам нужно
+перезагрузить систему.
+                                                                                                                                                    [?2004hИгнорировать/Ignore/Отменить/Cancel? Ignore
+[?2004l                                                                          [?2004h(parted) rm 2
+[?2004lОшибка: Был записан раздел(ы) 1 на /dev/sdb, но об этом изменении не удалось
+проинформировать ядро, вероятно, из-за занятости раздела. В результате старый
+раздел всё ещё используется. Чтобы выполнить дальнейшие изменения вам нужно
+перезагрузить систему.
+                                                                                                                                                    [?2004hИгнорировать/Ignore/Отменить/Cancel? Ignore
+[?2004l                                                                          [?2004h(parted) print
+[?2004lМодель: ATA VBOX HARDDISK (scsi)
+Диск /dev/sdb: 32,2GB
+Размер сектора (логич./физич.): 512B/512B
+Таблица разделов: gpt
+Флаги диска: 
+
+Номер  Начало  Конец   Размер  Файловая система  Имя  Флаги
+ 3     21,5GB  25,8GB  4295MB  xfs
+ 4     25,8GB  32,2GB  6440MB  xfs
+
+                                                                          [?2004h(parted) [K(parted) [K(parted) [K(parted) [K(parted) mklabel gpt
+[?2004lПредупреждение: Разделы на /dev/sdb используются.
+                                                                                                                                                    [?2004hИгнорировать/Ignore/Отменить/Cancel? Ignore
+[?2004lПредупреждение: Существующая метка диска на  /dev/sdb будет уничтожена и все
+данные на этом диске будут потеряны. Действительно продолжить?
+                                                                                                                                                    [?2004hДа/Yes/Нет/No? Yes
+[?2004lОшибка: Был записан раздел(ы) 1 на /dev/sdb, но об этом изменении не удалось
+проинформировать ядро, вероятно, из-за занятости раздела. В результате старый
+раздел всё ещё используется. Чтобы выполнить дальнейшие изменения вам нужно
+перезагрузить систему.
+                                                                                                                                                    [?2004hИгнорировать/Ignore/Отменить/Cancel? Ugn[K[K[KIgnore
+[?2004l                                                                          [?2004h(parted) mkpart primary linux-swap 0% 4GiB
+[?2004l                                                                          [?2004h(parted) name 1 swap_part
+[?2004l                                                                          [?2004h(parted) mkpart primary xfs 4 [KGiB 16GiB
+[?2004l                                                                          [?2004h(parted) name 2 gdisk1
+[?2004l                                                                          [?2004h(parted) mkpark[Kt primary zfs 16GiB 100%
+[?2004l                                                                          [?2004h(parted) name3[K 3 gdisk2
+[?2004l                                                                          [?2004h(parted) print
+[?2004lМодель: ATA VBOX HARDDISK (scsi)
+Диск /dev/sdb: 32,2GB
+Размер сектора (логич./физич.): 512B/512B
+Таблица разделов: gpt
+Флаги диска: 
+
+Номер  Начало  Конец   Размер  Файловая система  Имя        Флаги
+ 1     1049kB  4295MB  4294MB  linux-swap(v1)    swap_part  подкачка
+ 2     4295MB  17,2GB  12,9GB  xfs               gdisk1
+ 3     17,2GB  32,2GB  15,0GB  zfs               gdisk2
+
+                                                                          [?2004h(parted) ~[C[K^C[?2004l
+
+Информация: Не забудьте обновить /etc/fstab.
+
+                                                                          [?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkswap -L gpt_swap /dev/sdb1
+[?2004lmkswap: ошибка: /dev/sdb1 примонтирован; пространство swap не будет создано
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkswap -L gpt_swap /dev/sdb1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo mkswap -L gpt_swap /dev/sdb1[C[C[C[C[C[K2
+[?2004lmkswap: ошибка: /dev/sdb2 примонтирован; пространство swap не будет создано
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkswap -L gpt_swap /dev/sdb2[K3
+[?2004lSetting up swapspace version 1, size = 14 GiB (15031332864 bytes)
+LABEL=gpt_swap, UUID=7ab52523-ac59-4feb-a972-f90b12d96f3c
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ swapon --show
+[?2004lNAME      TYPE      SIZE USED PRIO
+/swap.img file      3,8G 1,2G   -2
+/dev/sdb1 partition  10G   0B   -3
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.xfs -L gpt_xfs /dev/sdb2
+[?2004lmkfs.xfs: /dev/sdb2 appears to contain an existing filesystem (ext4).
+mkfs.xfs: Use the -f option to force overwrite.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.xfs -L gpt_xfs /dev/sdb2[C[1@ [1@-[1@f[C[1@ 
+[?2004lmeta-data=/dev/sdb2              isize=512    agcount=4, agsize=122935 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=1
+         =                       reflink=1    bigtime=1 inobtcount=1 nrext64=0
+data     =                       bsize=4096   blocks=491739, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=16384, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cra[Keaty[Ke -f my_zfs_pool /dev/sdb3
+[?2004lКоманда «create» не найдена. Возможно, вы имели в виду:
+  команда 'pcreate' из deb-пакета pbuilder-scripts (22)
+Попробуйте: sudo apt install <имя_deb-пакета>
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo apt install pcreate
+[?2004lЧтение списков пакетов… 0%Чтение списков пакетов… 100%Чтение списков пакетов… Готово
+Построение дерева зависимостей… 0%Построение дерева зависимостей… 0%Построение дерева зависимостей… 50%Построение дерева зависимостей… 50%Построение дерева зависимостей… Готово
+Чтение информации о состоянии… 0%             Чтение информации о состоянии… 0%Чтение информации о состоянии… Готово
+[1;31mE: [0mНевозможно найти пакет pcreate[0m
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo apt install pcreate[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcreate -f my_zfs_pool /dev/sdb3[1@s[1@u[1@d[1@o[1@ [1@z[1@p[1@o[1@o[1@l[1@ 
+[?2004lsudo: zpool: команда не найдена
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo zpool create -f my_zfs_pool /dev/sdb3[C[C[C[1P[1P[1P[1P[1P
+[?2004lКоманда «zpool» не найдена, но может быть установлена с помощью:
+sudo apt install zfsutils-linux  # version 2.2.2-0ubuntu9.1, or
+sudo apt install zfs-fuse        # version 0.7.0-25
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ zpool create -f my_zfs_pool /dev/sdb3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo apt install zfsutils-linux
+[?2004lЧтение списков пакетов… 0%Чтение списков пакетов… 100%Чтение списков пакетов… Готово
+Построение дерева зависимостей… 0%Построение дерева зависимостей… 0%Построение дерева зависимостей… 50%Построение дерева зависимостей… 50%Построение дерева зависимостей… Готово
+Чтение информации о состоянии… 0%             Чтение информации о состоянии… 0%Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  libnvpair3linux libuutil3linux libzfs4linux libzpool5linux zfs-zed
+Предлагаемые пакеты:
+  nfs-kernel-server samba-common-bin zfs-initramfs | zfs-dracut
+Следующие НОВЫЕ пакеты будут установлены:
+  libnvpair3linux libuutil3linux libzfs4linux libzpool5linux zfs-zed
+  zfsutils-linux
+Обновлено 0 пакетов, установлено 6 новых пакетов, для удаления отмечено 0 пакетов, и 326 пакетов не обновлено.
+Необходимо скачать 2 355 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 7 399 kB.
+Хотите продолжить? [Д/н] 
+[33m0% [Обработка][0m                       Пол:1 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnvpair3linux amd64 2.2.2-0ubuntu9.2 [61,9 kB]
+[33m0% [1 libnvpair3linux 1 191 B/61,9 kB 2%][0m[33m                                           5% [Обработка][0m                       Пол:2 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 libuutil3linux amd64 2.2.2-0ubuntu9.2 [53,1 kB]
+[33m6% [2 libuutil3linux 4 071 B/53,1 kB 8%][0m                                          Пол:3 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 libzfs4linux amd64 2.2.2-0ubuntu9.2 [224 kB]
+[33m                                          11% [3 libzfs4linux 8 280 B/224 kB 4%][0m                                        Пол:4 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 libzpool5linux amd64 2.2.2-0ubuntu9.2 [1 397 kB]
+[33m22% [4 libzpool5linux 5 729 B/1 397 kB 0%][0m[33m                                              43% [4 libzpool5linux 623 kB/1 397 kB 45%][0m[33m                                            72% [Обработка][0m                        Пол:5 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 zfsutils-linux amd64 2.2.2-0ubuntu9.2 [551 kB]
+[33m73% [5 zfsutils-linux 13,9 kB/551 kB 3%][0m[33m94% [Ожидание заголовков][0m                                           Пол:6 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 zfs-zed amd64 2.2.2-0ubuntu9.2 [67,9 kB]
+[33m                                           95% [6 zfs-zed 21,4 kB/67,9 kB 32%][0m[33m                                   100% [Обработка][0m                         Получено 2 355 kB за 2с (1 176 kB/s)
+
+7[0;23r8[1AВыбор ранее не выбранного пакета libnvpair3linux.
+(Чтение базы данных … (Чтение базы данных … 5%(Чтение базы данных … 10%(Чтение базы данных … 15%(Чтение базы данных … 20%(Чтение базы данных … 25%(Чтение базы данных … 30%(Чтение базы данных … 35%(Чтение базы данных … 40%(Чтение базы данных … 45%(Чтение базы данных … 50%(Чтение базы данных … 55%(Чтение базы данных … 60%(Чтение базы данных … 65%(Чтение базы данных … 70%(Чтение базы данных … 75%(Чтение базы данных … 80%(Чтение базы данных … 85%(Чтение базы данных … 90%(Чтение базы данных … 95%(Чтение базы данных … 100%(Чтение базы данных … на данный момент установлено 153762 файла и каталога.)
+Подготовка к распаковке …/0-libnvpair3linux_2.2.2-0ubuntu9.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [  0%][49m[39m [....................................................] 87[24;0f[42m[30mХод выполнения: [  4%][49m[39m [##..................................................] 8Распаковывается libnvpair3linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [  8%][49m[39m [####................................................] 8Выбор ранее не выбранного пакета libuutil3linux.
+Подготовка к распаковке …/1-libuutil3linux_2.2.2-0ubuntu9.2_amd64.deb …7[24;0f[42m[30mХод выполнения: [ 12%][49m[39m [######..............................................] 8
+Распаковывается libuutil3linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 16%][49m[39m [########............................................] 8Выбор ранее не выбранного пакета libzfs4linux.
+Подготовка к распаковке …/2-libzfs4linux_2.2.2-0ubuntu9.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 20%][49m[39m [##########..........................................] 8Распаковывается libzfs4linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 24%][49m[39m [############........................................] 8Выбор ранее не выбранного пакета libzpool5linux.
+Подготовка к распаковке …/3-libzpool5linux_2.2.2-0ubuntu9.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 28%][49m[39m [##############......................................] 8Распаковывается libzpool5linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 32%][49m[39m [################....................................] 8Выбор ранее не выбранного пакета zfsutils-linux.
+Подготовка к распаковке …/4-zfsutils-linux_2.2.2-0ubuntu9.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 36%][49m[39m [##################..................................] 8Распаковывается zfsutils-linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 40%][49m[39m [####################................................] 8Выбор ранее не выбранного пакета zfs-zed.
+Подготовка к распаковке …/5-zfs-zed_2.2.2-0ubuntu9.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 44%][49m[39m [######################..............................] 8Распаковывается zfs-zed (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 48%][49m[39m [########################............................] 8Настраивается пакет libnvpair3linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 52%][49m[39m [###########################.........................] 87[24;0f[42m[30mХод выполнения: [ 56%][49m[39m [#############################.......................] 8Настраивается пакет libuutil3linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 60%][49m[39m [###############################.....................] 87[24;0f[42m[30mХод выполнения: [ 64%][49m[39m [#################################...................] 8Настраивается пакет libzpool5linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 68%][49m[39m [###################################.................] 87[24;0f[42m[30mХод выполнения: [ 72%][49m[39m [#####################################...............] 8Настраивается пакет libzfs4linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 76%][49m[39m [#######################################.............] 87[24;0f[42m[30mХод выполнения: [ 80%][49m[39m [#########################################...........] 8Настраивается пакет zfsutils-linux (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 84%][49m[39m [###########################################.........] 8insmod /lib/modules/6.11.0-17-generic/kernel/zfs/spl.ko.zst 
+insmod /lib/modules/6.11.0-17-generic/kernel/zfs/zfs.ko.zst 
+Created symlink /etc/systemd/system/zfs-import.target.wants/zfs-import-cache.service → /usr/lib/systemd/system/zfs-import-cache.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-import.target → /usr/lib/systemd/system/zfs-import.target.
+Created symlink /etc/systemd/system/zfs-mount.service.wants/zfs-load-module.service → /usr/lib/systemd/system/zfs-load-module.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-load-module.service → /usr/lib/systemd/system/zfs-load-module.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-mount.service → /usr/lib/systemd/system/zfs-mount.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-share.service → /usr/lib/systemd/system/zfs-share.service.
+Created symlink /etc/systemd/system/zfs-volumes.target.wants/zfs-volume-wait.service → /usr/lib/systemd/system/zfs-volume-wait.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-volumes.target → /usr/lib/systemd/system/zfs-volumes.target.
+Created symlink /etc/systemd/system/multi-user.target.wants/zfs.target → /usr/lib/systemd/system/zfs.target.
+zfs-import-scan.service is a disabled or a static unit, not starting it.
+7[24;0f[42m[30mХод выполнения: [ 88%][49m[39m [#############################################.......] 8Настраивается пакет zfs-zed (2.2.2-0ubuntu9.2) …
+7[24;0f[42m[30mХод выполнения: [ 92%][49m[39m [###############################################.....] 8Created symlink /etc/systemd/system/zed.service → /usr/lib/systemd/system/zfs-zed.service.
+Created symlink /etc/systemd/system/zfs.target.wants/zfs-zed.service → /usr/lib/systemd/system/zfs-zed.service.
+7[24;0f[42m[30mХод выполнения: [ 96%][49m[39m [#################################################...] 8Обрабатываются триггеры для man-db (2.12.0-4build2) …
+Обрабатываются триггеры для libc-bin (2.39-0ubuntu8.4) …
+
+7[0;24r8[1A[J[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo apt install zfsutils-linux[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Czpool create -f my_zfs_pool /dev/sdb3[1@s[1@u[1@d[1@o[1@ 
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkdir /mead[K[Kdia/gdisk1
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkdir /mead[K[Kdia/gdisk2
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkdir /media/gdisk2[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmount /dev/sdb2 /media/gdisk1
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo zfs set mountpiunt[K[K[K[Koint=/media/gdisk2 my_zfs_pool
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo blkid /ev[K[Kdev/sdb2
+[?2004l/dev/sdb2: LABEL="gpt_xfs" UUID="edf2511d-4e02-4a44-a872-05d65363d66e" BLOCK_SIZE="512" TYPE="xfs"
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo xfs_info /media/gdisk1
+[?2004lxfs_info: cannot open /media/gdisk1: Это каталог
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ gparted
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+^C
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lblk[K[Klk
+[?2004lКоманда «lblk» не найдена. Возможно, вы имели в виду:
+  команда 'lsblk' из deb-пакета util-linux (2.39.3-9ubuntu6.2)
+Попробуйте: sudo apt install <имя_deb-пакета>
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsbkl[K[Klk
+[?2004lNAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0  73,9M  1 loop /snap/core22/1802
+loop2    7:2    0  73,9M  1 loop /snap/core22/1963
+loop3    7:3    0 242,4M  1 loop /snap/firefox/5987
+loop4    7:4    0 269,8M  1 loop /snap/firefox/4793
+loop5    7:5    0  10,7M  1 loop /snap/firmware-updater/127
+loop6    7:6    0  11,1M  1 loop /snap/firmware-updater/167
+loop7    7:7    0 505,1M  1 loop /snap/gnome-42-2204/176
+loop8    7:8    0   516M  1 loop /snap/gnome-42-2204/202
+loop9    7:9    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop10   7:10   0   1,1G  1 loop /snap/libreoffice/342
+loop11   7:11   0   1,1G  1 loop /snap/libreoffice/344
+loop12   7:12   0  10,5M  1 loop /snap/snap-store/1173
+loop13   7:13   0  10,8M  1 loop /snap/snap-store/1270
+loop14   7:14   0  44,4M  1 loop /snap/snapd/23771
+loop15   7:15   0  50,9M  1 loop /snap/snapd/24505
+loop16   7:16   0   500K  1 loop /snap/snapd-desktop-integration/178
+loop17   7:17   0   568K  1 loop /snap/snapd-desktop-integration/253
+loop18   7:18   0   1,9G  0 loop /media/gdisk1
+                                 /mnt/docs2
+sda      8:0    0    25G  0 disk 
+├─sda1   8:1    0     1M  0 part 
+└─sda2   8:2    0    25G  0 part /
+sdb      8:16   0    30G  0 disk 
+├─sdb1   8:17   0     4G  0 part [SWAP]
+├─sdb2   8:18   0    12G  0 part 
+└─sdb3   8:19   0    14G  0 part 
+sr0     11:0    1  1024M  0 rom  
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -h
+[?2004lФайл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            392M         1,7M  390M            1% /run
+/dev/sda2         25G          16G  7,7G           67% /
+tmpfs            2,0G            0  2,0G            0% /dev/shm
+tmpfs            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs            392M         236K  392M            1% /run/user/1000
+/dev/loop18      1,9G          24K  1,7G            1% /mnt/docs2
+my_zfs_pool       14G         128K   14G            1% /media/gdisk2
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -hlsblk[1Pblkgpartedsudo xfs_info /media/gdisk1[7Pblkid /dev/sdb2zfs set mountpoint=/media/gdisk2 my_zfs_pool[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pmount /dev/sdb2 /media/gdisk1[10Pkdir /media/gdisk21zpool create -f my_zfs_pool /dev/sdb3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Papt install zfsutils-linuxzpool create -f my_zfs_pool /dev/sdb3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pmkdir /media/gdisk12ount /dev/sdb2 /media/gdisk1
+[?2004lmount: /media/gdisk1: /dev/sdb2 уже смонтирован.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/sdb2 /media/gdisk1[1P /media/gdisk11 /media/gdisk1
+[?2004lmount: /media/gdisk1: неизвестный тип файловой системы 'swap'.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/sdb1 /media/gdisk12[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdf -h[K
+[?2004lФайл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            392M         1,7M  390M            1% /run
+/dev/sda2         25G          16G  7,7G           67% /
+tmpfs            2,0G            0  2,0G            0% /dev/shm
+tmpfs            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs            392M         236K  392M            1% /run/user/1000
+/dev/loop18      1,9G          24K  1,7G            1% /mnt/docs2
+my_zfs_pool       14G         128K   14G            1% /media/gdisk2
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -hsudo mount /dev/sdb1 /media/gdisk12[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdf -h[Klsblk[1Pblkgpartedsudo xfs_info /media/gdisk1[7Pblkid /dev/sdb2zfs set mountpoint=/media/gdisk2 my_zfs_pool[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[29Pblkid /dev/sdb2zfs set mountpoint=/media/gdisk2 my_zfs_pool[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pmount /dev/sdb2 /media/gdisk1[10Pkdir /media/gdisk21zpool create -f my_zfs_pool /dev/sdb3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18Pmkdir /media/gdisk12ount /dev/sdb2 /media/gdisk1
+[?2004lmount: /media/gdisk1: /dev/sdb2 уже смонтирован.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ gpartedsudo mount /dev/sdb2 /media/gdisk1[1P /media/gdisk13 /media/gdisk1
+[?2004lmount: /media/gdisk1: неизвестный тип файловой системы 'zfs_member'.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ fdisk /[K/dev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+fdisk: невозможно открыть /dev/sdb: Отказано в доступе
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ fdisk /dev/sdb[1@s[1@u[1@d[1@o[1@ 
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+[31mThis disk is currently in use - repartitioning is probably a bad idea.
+It's recommended to umount all file systems, and swapoff all swap
+partitions on this disk.
+[0m
+
+[?2004hКоманда (m для справки): g
+[?2004l
+Создана новая метка диска GPT (GUID: AB5C2897-72AF-44F0-9E75-ED5E85C67554).
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (1-128, по умолчанию 1): 1[K3[K4
+[?2004l[?2004hПервый сектор (2048-62914526, по умолчанию 2048): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (2048-62914526, по умолчанию 62912511): +4GIB[K[K
+[?2004l
+Создан новый раздел 4 с типом 'Linux filesystem' и размером 4 GiB.
+[31mРаздел #4 содержит сигнатуру swap.[0m
+
+Удалить сигнатуру?[?2004h [Y] Да/[N] Нет: Y
+[?2004l
+Сигнатура будет удалена командой записи.
+
+[?2004hКоманда (m для справки): w
+[?2004lТаблица разделов была изменена.
+[31mFailed to remove partition 1 from system: Устройство или ресурс занято
+[0m[31mFailed to remove partition 3 from system: Устройство или ресурс занято
+[0m[31mFailed to add partition 4 to system: Устройство или ресурс занято
+[0m
+Ядро всё ещё использует старые разделы. Новая таблица будет задействована при следующей перезагрузке. 
+Синхронизируются диски.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo fdisk /dev/sdb[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo mount /dev/sdb3 /media/gdisk12[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /media/gdisk14 /media/gdisk1[C
+[?2004lmount: /media/gdisk1: special device /dev/sdb4 does not exist.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/sdb4 /media/gdisk1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo fdisk /dev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+[31mThis disk is currently in use - repartitioning is probably a bad idea.
+It's recommended to umount all file systems, and swapoff all swap
+partitions on this disk.
+[0m
+
+[?2004hКоманда (m для справки): p
+[?2004l[1m
+Диск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: AB5C2897-72AF-44F0-9E75-ED5E85C67554
+
+[1mУстр-во   [0m [1mначало[0m [1m  Конец[0m [1mСекторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb4    2048 8390655 8388608     4G Файловая система Linux
+
+[?2004hКоманда (m для справки): [?2004l
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ gparted
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+^C
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -h
+[?2004lФайл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            392M         1,7M  390M            1% /run
+/dev/sda2         25G          16G  7,7G           67% /
+tmpfs            2,0G            0  2,0G            0% /dev/shm
+tmpfs            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs            392M         236K  392M            1% /run/user/1000
+/dev/loop18      1,9G          24K  1,7G            1% /mnt/docs2
+my_zfs_pool       14G         128K   14G            1% /media/gdisk2
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -hgpartedsudo fdisk /dev/sdb[Ksudo fdisk /dev/sdb[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo mount /dev/sdb3 /media/gdisk1
+[?2004lmount: /media/gdisk1: неизвестный тип файловой системы 'zfs_member'.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo mkfs.ext4 /dev/sdb3 [27msudo mount /dev/sdb3 /media/gdisk1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdf -h[Ksudo mount /dev/sdb3 /media/gdisk1[1P /media/gdisk14 /media/gdisk1
+[?2004lmount: /media/gdisk1: special device /dev/sdb4 does not exist.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ ^?[K[7msudo mkfs.ext4 /dev/sdb3 [27msudo mkfs.ext4 /dev/sdb3 [C[C[1P 4 
+[?2004lmke2fs 1.47.0 (5-Feb-2023)
+The file /dev/sdb4 does not exist and no size was specified.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo wipefs -a /dev/sdb3[27m[1Psudo wipefs -a /dev/sdb4
+[?2004lwipefs: error: /dev/sdb4: probing initialization failed: Нет такого файла или каталога
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /ev/[K[K[Kdev/sdb3/[K /media/d[Kgdisk1
+[?2004lmount: /media/gdisk1: неизвестный тип файловой системы 'zfs_member'.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sud[K[K[Ksudo[K[K[K[K[7m# Очистите ZFS-метки[27m
+[7msudo wipefs -a /dev/sdb3[27m
+
+[7m# Создайте новую файловую систему (например, ext4)[27m
+[7msudo mkfs.ext4 /dev/sdb3[27m
+
+[7m# Смонтируйте[27m
+[7msudo mkdir -p /media/gdisk1[27m
+[7msudo mount /dev/sdb3 /media/gdisk1[27m[A[A[A[A[A[A[A[A# Очистите ZFS-метки
+sudo wipefs -a /dev/sdb3
+
+# Создайте новую файловую систему (например, ext4)
+sudo mkfs.ext4 /dev/sdb3
+
+# Смонтируйте
+sudo mkdir -p /media/gdisk1
+sudo mount /dev/sdb3 /media/gdisk1
+[?2004lwipefs: error: /dev/sdb3: probing initialization failed: Устройство или ресурс занято
+mke2fs 1.47.0 (5-Feb-2023)
+/dev/sdb3 is apparently in use by the system; will not make a filesystem here!
+mount: /media/gdisk1: неизвестный тип файловой системы 'zfs_member'.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo wipefs -a /dev/sdb3[27msudo wipefs -a /dev/sdb3
+[?2004lwipefs: error: /dev/sdb3: probing initialization failed: Устройство или ресурс занято
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7mmount | grep sdb3[27mmount | grep sdb3
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo umount /dev/sdb3[27msudo umount /dev/sdb3
+[?2004lumount: /dev/sdb3: not mounted.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo umount /dev/sdb3[K1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdf -h
+[?2004lФайл.система   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs            392M         1,7M  390M            1% /run
+/dev/sda2         25G          16G  7,7G           67% /
+tmpfs            2,0G            0  2,0G            0% /dev/shm
+tmpfs            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs            392M         236K  392M            1% /run/user/1000
+/dev/loop18      1,9G          24K  1,7G            1% /mnt/docs2
+my_zfs_pool       14G         128K   14G            1% /media/gdisk2
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -hsudo umount /dev/sdb3[4Pmount | grep sdb3sudo umount /dev/sdb3[K1
+[?2004lumount: /dev/sdb1: not mounted.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo umount /dev/sdb1df -h[Ksudo umount /dev/sdb3[4Pmount | grep sdb3sudo wipefs -a /dev/sdb3mount /dev/sdb3 /media/gdisk1[1P /media/gdisk11 /media/gdisk1
+[?2004lmount: /media/gdisk1: неизвестный тип файловой системы 'swap'.
+       dmesg(1) may have more information after failed mount system call.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/sdb1 /media/gdisk1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo mount /dev/sdb1 /media/gdisk1[13Pumount /dev/sdb1mount /dev/sdb1 /media/gdisk1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksd[K[Ksudo mount /dev/sdb1 /media/gdisk1[13Pumount /dev/sdb1df -h[Ksudo umount /dev/sdb1mount /dev/sdb1 /media/gdisk1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo blkid /dev/sdb2
+[?2004l/dev/sdb2: LABEL="gpt_xfs" UUID="edf2511d-4e02-4a44-a872-05d65363d66e" BLOCK_SIZE="512" TYPE="xfs"
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo blkid /dev/sdb2[K1
+[?2004l/dev/sdb1: LABEL="new_swap_label" UUID="4d3d79c1-8e59-4fcf-86d7-06b9405cd09f" TYPE="swap"
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo xfs_info /media/gdisk1
+[?2004lxfs_info: cannot open /media/gdisk1: Это каталог
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo[K[K[K[Ksudo xfs_info /media/gdisk1[7Pblkid /dev/sdb1
+[?2004l/dev/sdb1: LABEL="new_swap_label" UUID="4d3d79c1-8e59-4fcf-86d7-06b9405cd09f" TYPE="swap"
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo xfs_info /media/gdisk2
+[?2004lxfs_info: cannot open /media/gdisk2: Это каталог
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsblk
+[?2004lNAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0  73,9M  1 loop /snap/core22/1802
+loop2    7:2    0  73,9M  1 loop /snap/core22/1963
+loop3    7:3    0 242,4M  1 loop /snap/firefox/5987
+loop4    7:4    0 269,8M  1 loop /snap/firefox/4793
+loop5    7:5    0  10,7M  1 loop /snap/firmware-updater/127
+loop6    7:6    0  11,1M  1 loop /snap/firmware-updater/167
+loop7    7:7    0 505,1M  1 loop /snap/gnome-42-2204/176
+loop8    7:8    0   516M  1 loop /snap/gnome-42-2204/202
+loop9    7:9    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop10   7:10   0   1,1G  1 loop /snap/libreoffice/342
+loop11   7:11   0   1,1G  1 loop /snap/libreoffice/344
+loop12   7:12   0  10,5M  1 loop /snap/snap-store/1173
+loop13   7:13   0  10,8M  1 loop /snap/snap-store/1270
+loop14   7:14   0  44,4M  1 loop /snap/snapd/23771
+loop15   7:15   0  50,9M  1 loop /snap/snapd/24505
+loop16   7:16   0   500K  1 loop /snap/snapd-desktop-integration/178
+loop17   7:17   0   568K  1 loop /snap/snapd-desktop-integration/253
+loop18   7:18   0   1,9G  0 loop /media/gdisk1
+                                 /mnt/docs2
+sda      8:0    0    25G  0 disk 
+├─sda1   8:1    0     1M  0 part 
+└─sda2   8:2    0    25G  0 part /
+sdb      8:16   0    30G  0 disk 
+├─sdb1   8:17   0     4G  0 part [SWAP]
+└─sdb3   8:19   0    14G  0 part 
+sr0     11:0    1  1024M  0 rom  
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo pvcrat[K[Keatr[Ke /dev/sdb
+[?2004lsudo: pvcreate: команда не найдена
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ pvcreate
+[?2004lКоманда «pvcreate» не найдена, но может быть установлена с помощью:
+sudo apt install lvm2
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo apt install lvm2
+[?2004lЧтение списков пакетов… 0%Чтение списков пакетов… 100%Чтение списков пакетов… Готово
+Построение дерева зависимостей… 0%Построение дерева зависимостей… 0%Построение дерева зависимостей… 50%Построение дерева зависимостей… 50%Построение дерева зависимостей… Готово
+Чтение информации о состоянии… 0%             Чтение информации о состоянии… 0%Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  dmeventd dmsetup libaio1t64 libdevmapper-event1.02.1 libdevmapper1.02.1
+  liblvm2cmd2.03 thin-provisioning-tools
+Следующие НОВЫЕ пакеты будут установлены:
+  dmeventd libaio1t64 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2
+  thin-provisioning-tools
+Следующие пакеты будут обновлены:
+  dmsetup libdevmapper1.02.1
+Обновлено 2 пакетов, установлено 6 новых пакетов, для удаления отмечено 0 пакетов, и 324 пакетов не обновлено.
+Необходимо скачать 2 695 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 9 043 kB.
+Хотите продолжить? [Д/н] 
+[33m0% [Обработка][0m[33m0% [Обработка][0m                       Пол:1 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 libdevmapper1.02.1 amd64 2:1.02.185-3ubuntu3.2 [139 kB]
+[33m0% [1 libdevmapper1.02.1 4 069 B/139 kB 3%][0m[33m                                             7% [Обработка][0m                       Пол:2 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 dmsetup amd64 2:1.02.185-3ubuntu3.2 [79,2 kB]
+[33m7% [2 dmsetup 2 630 B/79,2 kB 3%][0m[33m11% [Ожидание заголовков][0m                                           Пол:3 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 libdevmapper-event1.02.1 amd64 2:1.02.185-3ubuntu3.2 [12,6 kB]
+[33m12% [3 libdevmapper-event1.02.1 12,6 kB/12,6 kB 100%][0m                                                     Пол:4 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 libaio1t64 amd64 0.3.113-6build1.1 [7 210 B]
+[33m                                                     15% [4 libaio1t64 7 210 B/7 210 B 100%][0m[33m17% [Ожидание заголовков][0m                                           Пол:5 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 liblvm2cmd2.03 amd64 2.03.16-3ubuntu3.2 [797 kB]
+[33m                                           18% [5 liblvm2cmd2.03 26,7 kB/797 kB 3%][0m[33m43% [Ожидание заголовков][0m                                           Пол:6 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 dmeventd amd64 2:1.02.185-3ubuntu3.2 [38,0 kB]
+[33m                                           44% [6 dmeventd 17,6 kB/38,0 kB 46%][0m                                    Пол:7 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 lvm2 amd64 2.03.16-3ubuntu3.2 [1 186 kB]
+[33m47% [7 lvm2 5 278 B/1 186 kB 0%][0m                                    Пол:8 http://by.archive.ubuntu.com/ubuntu noble-updates/main amd64 thin-provisioning-tools amd64 0.9.0-2ubuntu5.1 [436 kB]
+[33m85% [8 thin-provisioning-tools 25,3 kB/436 kB 6%][0m[33m                                                 100% [Обработка][0m                         Получено 2 695 kB за 1с (1 876 kB/s)
+
+7[0;23r8[1A(Чтение базы данных … (Чтение базы данных … 5%(Чтение базы данных … 10%(Чтение базы данных … 15%(Чтение базы данных … 20%(Чтение базы данных … 25%(Чтение базы данных … 30%(Чтение базы данных … 35%(Чтение базы данных … 40%(Чтение базы данных … 45%(Чтение базы данных … 50%(Чтение базы данных … 55%(Чтение базы данных … 60%(Чтение базы данных … 65%(Чтение базы данных … 70%(Чтение базы данных … 75%(Чтение базы данных … 80%(Чтение базы данных … 85%(Чтение базы данных … 90%(Чтение базы данных … 95%(Чтение базы данных … 100%(Чтение базы данных … на данный момент установлено 154136 файлов и каталогов.)
+Подготовка к распаковке …/0-libdevmapper1.02.1_2%3a1.02.185-3ubuntu3.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [  0%][49m[39m [....................................................] 87[24;0f[42m[30mХод выполнения: [  3%][49m[39m [#...................................................] 8Распаковывается libdevmapper1.02.1:amd64 (2:1.02.185-3ubuntu3.2) на замену (2:1.02.185-3ubuntu3) …
+7[24;0f[42m[30mХод выполнения: [  6%][49m[39m [###.................................................] 8Подготовка к распаковке …/1-dmsetup_2%3a1.02.185-3ubuntu3.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [  9%][49m[39m [####................................................] 8Распаковывается dmsetup (2:1.02.185-3ubuntu3.2) на замену (2:1.02.185-3ubuntu3) …
+7[24;0f[42m[30mХод выполнения: [ 12%][49m[39m [######..............................................] 8Выбор ранее не выбранного пакета libdevmapper-event1.02.1:amd64.
+Подготовка к распаковке …/2-libdevmapper-event1.02.1_2%3a1.02.185-3ubuntu3.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 15%][49m[39m [#######.............................................] 8Распаковывается libdevmapper-event1.02.1:amd64 (2:1.02.185-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 18%][49m[39m [#########...........................................] 8Выбор ранее не выбранного пакета libaio1t64:amd64.
+Подготовка к распаковке …/3-libaio1t64_0.3.113-6build1.1_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 21%][49m[39m [###########.........................................] 8Распаковывается libaio1t64:amd64 (0.3.113-6build1.1) …
+7[24;0f[42m[30mХод выполнения: [ 24%][49m[39m [############........................................] 8Выбор ранее не выбранного пакета liblvm2cmd2.03:amd64.
+Подготовка к распаковке …/4-liblvm2cmd2.03_2.03.16-3ubuntu3.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 27%][49m[39m [##############......................................] 8Распаковывается liblvm2cmd2.03:amd64 (2.03.16-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 30%][49m[39m [###############.....................................] 8Выбор ранее не выбранного пакета dmeventd.
+Подготовка к распаковке …/5-dmeventd_2%3a1.02.185-3ubuntu3.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 33%][49m[39m [#################...................................] 8Распаковывается dmeventd (2:1.02.185-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 36%][49m[39m [##################..................................] 8Выбор ранее не выбранного пакета lvm2.
+Подготовка к распаковке …/6-lvm2_2.03.16-3ubuntu3.2_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 39%][49m[39m [####################................................] 8Распаковывается lvm2 (2.03.16-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 42%][49m[39m [######################..............................] 8Выбор ранее не выбранного пакета thin-provisioning-tools.
+Подготовка к распаковке …/7-thin-provisioning-tools_0.9.0-2ubuntu5.1_amd64.deb …
+7[24;0f[42m[30mХод выполнения: [ 45%][49m[39m [#######################.............................] 8Распаковывается thin-provisioning-tools (0.9.0-2ubuntu5.1) …
+7[24;0f[42m[30mХод выполнения: [ 48%][49m[39m [#########################...........................] 8Настраивается пакет libdevmapper1.02.1:amd64 (2:1.02.185-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 52%][49m[39m [##########################..........................] 87[24;0f[42m[30mХод выполнения: [ 55%][49m[39m [############################........................] 8Настраивается пакет libaio1t64:amd64 (0.3.113-6build1.1) …
+7[24;0f[42m[30mХод выполнения: [ 58%][49m[39m [#############################.......................] 87[24;0f[42m[30mХод выполнения: [ 61%][49m[39m [###############################.....................] 8Настраивается пакет dmsetup (2:1.02.185-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 64%][49m[39m [#################################...................] 87[24;0f[42m[30mХод выполнения: [ 67%][49m[39m [##################################..................] 8Настраивается пакет libdevmapper-event1.02.1:amd64 (2:1.02.185-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 70%][49m[39m [####################################................] 87[24;0f[42m[30mХод выполнения: [ 73%][49m[39m [#####################################...............] 8Настраивается пакет thin-provisioning-tools (0.9.0-2ubuntu5.1) …
+7[24;0f[42m[30mХод выполнения: [ 76%][49m[39m [#######################################.............] 87[24;0f[42m[30mХод выполнения: [ 79%][49m[39m [########################################............] 8Настраивается пакет liblvm2cmd2.03:amd64 (2.03.16-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 82%][49m[39m [##########################################..........] 87[24;0f[42m[30mХод выполнения: [ 85%][49m[39m [############################################........] 8Настраивается пакет dmeventd (2:1.02.185-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 88%][49m[39m [#############################################.......] 8Created symlink /etc/systemd/system/sockets.target.wants/dm-event.socket → /usr/lib/systemd/system/dm-event.socket.
+dm-event.service is a disabled or a static unit, not starting it.
+7[24;0f[42m[30mХод выполнения: [ 91%][49m[39m [###############################################.....] 8Настраивается пакет lvm2 (2.03.16-3ubuntu3.2) …
+7[24;0f[42m[30mХод выполнения: [ 94%][49m[39m [################################################....] 8Created symlink /etc/systemd/system/sysinit.target.wants/blk-availability.service → /usr/lib/systemd/system/blk-availability.service.
+Created symlink /etc/systemd/system/sysinit.target.wants/lvm2-monitor.service → /usr/lib/systemd/system/lvm2-monitor.service.
+Created symlink /etc/systemd/system/sysinit.target.wants/lvm2-lvmpolld.socket → /usr/lib/systemd/system/lvm2-lvmpolld.socket.
+7[24;0f[42m[30mХод выполнения: [ 97%][49m[39m [##################################################..] 8Обрабатываются триггеры для initramfs-tools (0.142ubuntu25.1) …
+update-initramfs: Generating /boot/initrd.img-6.11.0-17-generic
+I: The initramfs will attempt to resume from /dev/sdb1
+I: (UUID=4d3d79c1-8e59-4fcf-86d7-06b9405cd09f)
+I: Set the RESUME variable to override this.
+Обрабатываются триггеры для libc-bin (2.39-0ubuntu8.4) …
+Обрабатываются триггеры для man-db (2.12.0-4build2) …
+
+7[0;24r8[1A[J[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo apt install lvm2[13Ppvcreatesudo pvcreate /dev/sdb
+[?2004l  Cannot use /dev/sdb: device is partitioned
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ gpt[Karted
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+Был записан раздел(ы) 1, 3 на /dev/sdb, но об этом изменении не удалось проинформировать ядро, вероятно, из-за занятости раздела. В результате старый раздел всё ещё используется. Чтобы выполнить дальнейшие изменения вам нужно перезагрузить систему.
+^C
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ gpartedsudo pvcreate /dev/sdb
+[?2004l  Cannot use /dev/sdb: device is partitioned
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo pvcreate /dev/sdb[Ksudo pvcreate /dev/sdbgparted[K
+[?2004lGParted 1.5.0
+configuration --enable-libparted-dmraid --enable-online-resize
+libparted 3.6
+^C
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ gpartedsudo pvcreate /dev/sdb
+[?2004l  Cannot use /dev/sdb: device is partitioned
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7muser@user-VirtualBox:~$ sudo pvcreate /dev/sdb[27m
+[7m  Cannot use /dev/sdb: device is partitioned[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuser@user-VirtualBox:~$ sudo pvcreate /dev/sdb
+  Cannot use /dev/sdb: device is partitioned
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24P
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7msudo wipefs -a /dev/sdb [27msudo wipefs -a /dev/sdb 
+[?2004lwipefs: error: /dev/sdb: probing initialization failed: Устройство или ресурс занято
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo fdisk /dev/sdb[27msudo fdisk /dev/sdb
+[?2004l[32m
+Добро пожаловать в fdisk (util-linux 2.39.3).
+[0mИзменения останутся только в памяти до тех пор, пока вы не решите записать их.
+Будьте внимательны, используя команду write.
+
+[31mThis disk is currently in use - repartitioning is probably a bad idea.
+It's recommended to umount all file systems, and swapoff all swap
+partitions on this disk.
+[0m
+
+[?2004hКоманда (m для справки): n
+[?2004l[?2004hНомер раздела (1-128, по умолчанию 1): 1
+[?2004l[?2004hПервый сектор (2048-62914526, по умолчанию 2048): 
+[?2004l[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (2048-62914526, по умолчанию 62912511): 10G
+[?2004l[31mЗначение за пределами диапазона.[0m
+[?2004hLast sector, +/-sectors or +/-size{K,M,G,T,P} (2048-62914526, по умолчанию 62912511): 
+[?2004l
+Создан новый раздел 1 с типом 'Linux filesystem' и размером 30 GiB.
+[31mРаздел #1 содержит сигнатуру zfs_member.[0m
+
+Удалить сигнатуру?[?2004h [Y] Да/[N] Нет: Y[K:[KN
+[?2004l
+[?2004hКоманда (m для справки): p
+[?2004l[1m
+Диск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: AB5C2897-72AF-44F0-9E75-ED5E85C67554
+
+[1mУстр-во   [0m [1mначало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1    2048 62912511 62910464    30G Файловая система Linux
+
+[?2004hКоманда (m для справки): t
+[?2004lВыбранный раздел 1
+[?2004hPartition type or alias (type L to list all): *[K8E[Ke
+[?2004lТип раздела 1 не изменен :Linux filesystem.
+
+[?2004hКоманда (m для справки): w
+[?2004lТаблица разделов была изменена.
+[31mFailed to add partition 1 to system: Устройство или ресурс занято
+[0m
+Ядро всё ещё использует старые разделы. Новая таблица будет задействована при следующей перезагрузке. 
+Синхронизируются диски.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ 1sudo fdisk /dev/sdbwipefs -a /dev/sdb [2Ppvcreate /dev/sdb
+[?2004l  Cannot use /dev/sdb: device is partitioned
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo pvcreate /dev/sdb1
+[?2004l  Can't open /dev/sdb1 exclusively.  Mounted filesystem?
+  Can't open /dev/sdb1 exclusively.  Mounted filesystem?
+  Error opening device /dev/sdb1 for reading at 0 length 4096.
+  Cannot use /dev/sdb1: device has a signature
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo umount /dev/sdb1[27msudo umount /dev/sdb1
+[?2004lumount: /dev/sdb1: not mounted.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo dd if=/dev/zero of=/dev/sdb1 bs=1M count=10  # Зану[27m[7mл[27m[7mяет первые 10 МБ[27m[A]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo dd if=/dev/zero of=/dev/sdb1 bs=1M count=10  # Занул[1Pяет первые 10 М[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K=10
+[?2004ldd: ошибка записи '/dev/sdb1': Текстовый файл занят
+1+0 записей получено
+0+0 записей отправлено
+0 байт скопировано, 0,00592118 s, 0,0 kB/s
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2025-06-04 00:22:05+03:00 [COMMAND_EXIT_CODE="1"]

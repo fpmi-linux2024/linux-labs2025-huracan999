@@ -1,0 +1,192 @@
+Script started on 2025-06-04 00:24:19+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+Hello, user!
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo pvcreate /dev/sdb
+[?2004l[sudo] пароль для user: 
+  Cannot use /dev/sdb: device is partitioned
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo pvcreate /dev/sdb[K[7msudo fdisk -l /dev/sdb[27msudo fdisk -l /dev/sdb
+[?2004l[1mДиск /dev/sdb: 30 GiB, 32212254720 байт, 62914560 секторов
+[0mDisk model: VBOX HARDDISK   
+Единицы: секторов по 1 * 512 = 512 байт
+Размер сектора (логический/физический): 512 байт / 512 байт
+Размер I/O (минимальный/оптимальный): 512 байт / 512 байт
+Тип метки диска: gpt
+Идентификатор диска: AB5C2897-72AF-44F0-9E75-ED5E85C67554
+
+[1mУстр-во   [0m [1mначало[0m [1m   Конец[0m [1m Секторы[0m [1mРазмер[0m [1mТип[0m
+/dev/sdb1    2048 62912511 62910464    30G Файловая система Linux
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo wipefs -a /dev/sdb1
+[?2004l/dev/sdb1: 8 байтов стёрто по смещению 0x77fda6000 (zfs_member): 0c b1 ba 00 00 00 00 00
+/dev/sdb1: 8 байтов стёрто по смещению 0x77fda5c00 (zfs_member): 0c b1 ba 00 00 00 00 00
+/dev/sdb1: 8 байтов стёрто по смещению 0x77fde6000 (zfs_member): 0c b1 ba 00 00 00 00 00
+/dev/sdb1: 8 байтов стёрто по смещению 0x77fde5c00 (zfs_member): 0c b1 ba 00 00 00 00 00
+/dev/sdb1: 8 байтов стёрто по смещению 0x77fde1800 (zfs_member): 0c b1 ba 00 00 00 00 00
+/dev/sdb1: 8 байтов стёрто по смещению 0x77fde1400 (zfs_member): 0c b1 ba 00 00 00 00 00
+/dev/sdb1: 8 байтов стёрто по смещению 0x77fde1000 (zfs_member): 0c b1 ba 00 00 00 00 00
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo wipefs -a /dev/sdb1[K
+[?2004l/dev/sdb: 8 байтов стёрто по смещению 0x00000200 (gpt): 45 46 49 20 50 41 52 54
+/dev/sdb: 8 байтов стёрто по смещению 0x77ffffe00 (gpt): 45 46 49 20 50 41 52 54
+/dev/sdb: 2 байта стёрто по смещению 0x000001fe (PMBR): 55 aa
+/dev/sdb: calling ioctl to re-read partition table: Выполнено
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo dd if=/dev/zero of=/dev/sdb bs=1M count=10 [27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo dd if=/dev/zero of=/dev/sdb bs=1M count=10 
+[?2004l10+0 записей получено
+10+0 записей отправлено
+10485760 байтов (10 MB, 10 MiB) скопировано, 0,0379379 s, 276 MB/s
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo pvcreate /dev/sdb[27msudo pvcreate /dev/sdb
+[?2004l  Physical volume "/dev/sdb" successfully created.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo pvdisplay
+[?2004l  "/dev/sdb" is a new physical volume of "30,00 GiB"
+  --- NEW Physical volume ---
+  PV Name               /dev/sdb
+  VG Name               
+  PV Size               30,00 GiB
+  Allocatable           NO
+  PE Size               0   
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               QRJe5i-Fd7t-DAAU-jvwY-Iwqa-mVfT-1UHYdB
+   
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo vgcreate vg_date /dev/sdb
+[?2004l  Volume group "vg_date" successfully created
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo vgdisplay
+[?2004l  --- Volume group ---
+  VG Name               vg_date
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               <30,00 GiB
+  PE Size               4,00 MiB
+  Total PE              7679
+  Alloc PE / Size       0 / 0   
+  Free  PE / Size       7679 / <30,00 GiB
+  VG UUID               NxLJRd-UEn9-U9Xa-d8jL-nBZz-0SFG-rMFH05
+   
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo lvcreate -L 5G -n lv_storate vg_at[K[Kdata
+[?2004l  Volume group "vg_data" not found
+  Cannot process volume group vg_data
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo lvcreate -L 5G -n lv_storate vg_data[1P[1@g
+[?2004l  Volume group "vg_data" not found
+  Cannot process volume group vg_data
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo pvdisplay[27msudo pvdisplay
+[?2004l  --- Physical volume ---
+  PV Name               /dev/sdb
+  VG Name               vg_date
+  PV Size               30,00 GiB / not usable 4,00 MiB
+  Allocatable           yes 
+  PE Size               4,00 MiB
+  Total PE              7679
+  Free PE               7679
+  Allocated PE          0
+  PV UUID               QRJe5i-Fd7t-DAAU-jvwY-Iwqa-mVfT-1UHYdB
+   
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ [7msudo vgdisplay vg_data[27msudo vgdisplay vg_data
+[?2004l  Volume group "vg_data" not found
+  Cannot process volume group vg_data
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo vgdisplay vg_data[8Ppvdisplaylvcreate -L 5G -n lv_storage vg_data[Ke
+[?2004l  Logical volume "lv_storage" created.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo lvdisplay
+[?2004l  --- Logical volume ---
+  LV Path                /dev/vg_date/lv_storage
+  LV Name                lv_storage
+  VG Name                vg_date
+  LV UUID                UEDO2u-hPUp-g80m-fdWH-VHJG-cPpB-xEchEB
+  LV Write Access        read/write
+  LV Creation host, time user-VirtualBox, 2025-06-04 00:31:19 +0300
+  LV Status              available
+  # open                 0
+  LV Size                5,00 GiB
+  Current LE             1280
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           252:0
+   
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ lsblk
+[?2004lNAME                 MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0                  7:0    0     4K  1 loop /snap/bare/5
+loop2                  7:2    0  73,9M  1 loop /snap/core22/1963
+loop3                  7:3    0 242,4M  1 loop /snap/firefox/5987
+loop4                  7:4    0 269,8M  1 loop /snap/firefox/4793
+loop5                  7:5    0  10,7M  1 loop /snap/firmware-updater/127
+loop6                  7:6    0 505,1M  1 loop /snap/gnome-42-2204/176
+loop7                  7:7    0  11,1M  1 loop /snap/firmware-updater/167
+loop8                  7:8    0   516M  1 loop /snap/gnome-42-2204/202
+loop9                  7:9    0  91,7M  1 loop /snap/gtk-common-themes/1535
+loop10                 7:10   0   1,1G  1 loop /snap/libreoffice/342
+loop11                 7:11   0  10,5M  1 loop /snap/snap-store/1173
+loop12                 7:12   0   1,1G  1 loop /snap/libreoffice/344
+loop13                 7:13   0  10,8M  1 loop /snap/snap-store/1270
+loop14                 7:14   0  44,4M  1 loop /snap/snapd/23771
+loop15                 7:15   0   500K  1 loop /snap/snapd-desktop-integration/178
+loop16                 7:16   0  50,9M  1 loop /snap/snapd/24505
+loop17                 7:17   0   568K  1 loop /snap/snapd-desktop-integration/253
+loop18                 7:18   0  73,9M  1 loop /snap/core22/1981
+sda                    8:0    0    25G  0 disk 
+├─sda1                 8:1    0     1M  0 part 
+└─sda2                 8:2    0    25G  0 part /
+sdb                    8:16   0    30G  0 disk 
+└─vg_date-lv_storage 252:0    0     5G  0 lvm  
+sr0                   11:0    1  1024M  0 rom  
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkfs.ext4 /dev/vg_date/lv_storage
+[?2004lmke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 1310720 4k blocks and 327680 inodes
+Filesystem UUID: 678b9cdf-96ec-44de-b4be-235679c75a72
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736
+
+Allocating group tables:  0/40     done                            
+Сохранение таблицы inod'ов:  0/40     done                            
+Создание журнала (16384 блоков): готово
+Writing superblocks and filesystem accounting information:  0/40     готово
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mkdir /mnt/lvm_storage
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount /dev/vg_date/lv_storage /mnt/lkv[K[Kvm_storage
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -h
+[?2004lФайл.система                   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs                            392M         1,7M  390M            1% /run
+/dev/sda2                         25G          16G  7,6G           68% /
+tmpfs                            2,0G            0  2,0G            0% /dev/shm
+tmpfs                            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs                            392M         192K  392M            1% /run/user/1000
+/dev/mapper/vg_date-lv_storage   4,9G          24K  4,6G            1% /mnt/lvm_storage
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo ;[K'd[K/dev/vg_date/lv_storage /mnt/lvm_storage ext4 f[Kde[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 de[K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a [K]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo '/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0' | sudo tee -a /etc/fstab
+[?2004l/dev/vg_date/lv_storage /mnt/lvm_storage ext4 defaults 0 0
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo mount -a
+[?2004l[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo lvextenf[Kd -L 8G /ev/vg_date/lv_storage
+[?2004l  "/ev/vg_date/lv_storage": Invalid path for Logical Volume.
+  Run `lvextend --help' for more information.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo lvextend -L 8G /ev/vg_date/lv_storagedev/vg_date/lv_storage
+[?2004l  Size of logical volume vg_date/lv_storage changed from 5,00 GiB (1280 extents) to 8,00 GiB (2048 extents).
+  Logical volume vg_date/lv_storage successfully resized.
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ sudo resize2fs /dev/vg_date/lv_storage
+[?2004lresize2fs 1.47.0 (5-Feb-2023)
+Filesystem at /dev/vg_date/lv_storage is mounted on /mnt/lvm_storage; on-line resizing required
+old_desc_blocks = 1, new_desc_blocks = 1
+The filesystem on /dev/vg_date/lv_storage is now 2097152 (4k) blocks long.
+
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ df -h
+[?2004lФайл.система                   Размер Использовано  Дост Использовано% Cмонтировано в
+tmpfs                            392M         1,7M  390M            1% /run
+/dev/sda2                         25G          16G  7,6G           68% /
+tmpfs                            2,0G            0  2,0G            0% /dev/shm
+tmpfs                            5,0M         8,0K  5,0M            1% /run/lock
+tmpfs                            392M         192K  392M            1% /run/user/1000
+/dev/mapper/vg_date-lv_storage   7,8G          24K  7,4G            1% /mnt/lvm_storage
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ echo "Е[Kтест[K[K[K[KТест LVM" | t[Ksudo tee /mnt/lvm_storage/test.txt
+[?2004lТест LVM
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ cat /mnt/lvm_storage/test.txt
+[?2004lТест LVM
+[?2004h]0;user@user-VirtualBox: ~[01;32muser@user-VirtualBox[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2025-06-04 00:37:33+03:00 [COMMAND_EXIT_CODE="0"]
