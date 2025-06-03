@@ -28,3 +28,8 @@
 ## Лабораторная работа №8
 [Ссылка на отчет](https://disk.yandex.ru/d/_y_pwAiqgx94Rw)
 
+## Лабораторная работа №9
+[Ссылка на отчет](https://disk.yandex.ru/d/wQYRWHtPxPHz6g)
+
+## Лабораторная работа №10
+[Ссылка на отчет](https://disk.yandex.ru/d/LSOL-EJ4T_okbw)
