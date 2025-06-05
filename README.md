@@ -33,3 +33,7 @@
 
 ## Лабораторная работа №10
 [Ссылка на отчет](https://disk.yandex.ru/d/LSOL-EJ4T_okbw)
+
+## Лабораторная работа №11
+[Ссылка на отчет](https://disk.yandex.ru/d/HvjuFZc_baICOA)
+
